@@ -203,7 +203,7 @@ export default function RetirementPage() {
     const payload = {
       employeeId: employeeDetails.id,
       submittedById: user.id,
-      status: role === ROLES.HHRMD ? 'Pending HHRMD Review' : 'Pending HRMO Review',
+      status: 'Pending HRMO/HHRMD Review',
       retirementType: retirementType,
       illnessDescription: retirementType === 'illness' ? illnessDescription : undefined,
       delayReason: showDelayFields ? delayReason : undefined,
@@ -266,9 +266,16 @@ export default function RetirementPage() {
       setRejectionReasonInput('');
       setIsRejectionModalOpen(true);
     } else if (action === 'forward') {
-      const payload = { status: "Request Received – Awaiting Commission Decision", reviewStage: 'commission_review' };
+      let payload;
+      if (role === ROLES.HRMO) {
+        payload = { status: "Pending HHRMD Review", reviewStage: 'HHRMD_review' };
+      } else if (role === ROLES.HHRMD) {
+        payload = { status: "Request Received – Awaiting Commission Decision", reviewStage: 'commission_review' };
+      } else {
+        return; // Should not happen based on UI logic
+      }
       const success = await handleUpdateRequest(requestId, payload);
-      if (success) toast({ title: "Request Forwarded", description: `Request for ${request.employee.name} forwarded to Commission.` });
+      if (success) toast({ title: "Request Forwarded", description: `Request for ${request.employee.name} forwarded.` });
     }
   };
 
@@ -445,6 +452,43 @@ export default function RetirementPage() {
           )}
         </Card>
       )}
+      
+      {role === ROLES.HRO && pendingRequests.length > 0 && (
+        <Card className="mb-6 shadow-lg">
+          <CardHeader>
+            <CardTitle>Your Submitted Retirement Requests</CardTitle>
+            <CardDescription>Track the status of retirement requests you have submitted.</CardDescription>
+          </CardHeader>
+          <CardContent>
+            {paginatedRequests.map((request) => (
+              <div key={request.id} className="mb-4 border p-4 rounded-md space-y-2 shadow-sm bg-background hover:shadow-md transition-shadow">
+                <h3 className="font-semibold text-base">Retirement Request for: {request.employee.name} (ZanID: {request.employee.zanId})</h3>
+                <p className="text-sm text-muted-foreground">Type: {request.retirementType}</p>
+                <p className="text-sm text-muted-foreground">Proposed Date: {request.proposedDate ? format(parseISO(request.proposedDate), 'PPP') : 'N/A'}</p>
+                <p className="text-sm text-muted-foreground">Submitted: {request.createdAt ? format(parseISO(request.createdAt), 'PPP') : 'N/A'}</p>
+                <p className="text-sm"><span className="font-medium">Status:</span> <span className="text-primary">{request.status}</span></p>
+                {request.rejectionReason && <p className="text-sm text-destructive"><span className="font-medium">Rejection Reason:</span> {request.rejectionReason}</p>}
+                <div className="mt-3 pt-3 border-t flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
+                  <Button size="sm" variant="outline" onClick={() => { setSelectedRequest(request); setIsDetailsModalOpen(true); }}>View Details</Button>
+                  {role === ROLES.HRO && (request.status === 'Rejected by HRMO - Awaiting HRO Correction' || request.status === 'Rejected by HHRMD - Awaiting HRO Correction') && (
+                    <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white" onClick={() => console.log('Correction functionality to be implemented')}>
+                      Correct and Resubmit
+                    </Button>
+                  )}
+                </div>
+              </div>
+            ))}
+            <Pagination
+              currentPage={currentPage}
+              totalPages={Math.ceil(pendingRequests.length / itemsPerPage)}
+              onPageChange={setCurrentPage}
+              totalItems={pendingRequests.length}
+              itemsPerPage={itemsPerPage}
+            />
+          </CardContent>
+        </Card>
+      )}
+
       {(role === ROLES.HHRMD || role === ROLES.HRMO) && ( 
         <Card className="shadow-lg">
           <CardHeader>
@@ -465,10 +509,25 @@ export default function RetirementPage() {
                   {request.rejectionReason && <p className="text-sm text-destructive"><span className="font-medium">Rejection Reason:</span> {request.rejectionReason}</p>}
                   <div className="mt-3 pt-3 border-t flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
                     <Button size="sm" variant="outline" onClick={() => { setSelectedRequest(request); setIsDetailsModalOpen(true); }}>View Details</Button>
-                    {request.reviewStage === 'initial' && (request.status.startsWith(`Pending ${role} Review`)) && (
+                    {(role === ROLES.HHRMD || role === ROLES.HRMO) && (
                       <>
-                        <Button size="sm" onClick={() => handleInitialAction(request.id, 'forward')}>Verify &amp; Forward to Commission</Button>
-                        <Button size="sm" variant="destructive" onClick={() => handleInitialAction(request.id, 'reject')}>Reject &amp; Return to HRO</Button>
+                        {request.reviewStage === 'initial' && (
+                          (role === ROLES.HRMO && (request.status === 'Pending HRMO Review' || request.status === 'Pending HRMO/HHRMD Review')) ||
+                          (role === ROLES.HHRMD && (request.status === 'Pending HRMO Review' || request.status === 'Pending HHRMD Review' || request.status === 'Pending HRMO/HHRMD Review'))
+                        ) && (
+                          <>
+                            <Button size="sm" onClick={() => handleInitialAction(request.id, 'forward')}>
+                              {role === ROLES.HRMO ? 'Verify & Forward to HHRMD' : 'Verify & Forward to Commission'}
+                            </Button>
+                            <Button size="sm" variant="destructive" onClick={() => handleInitialAction(request.id, 'reject')}>Reject & Return to HRO</Button>
+                          </>
+                        )}
+                        {request.reviewStage === 'HHRMD_review' && (role === ROLES.HHRMD && request.status === 'Pending HHRMD Review') && (
+                          <>
+                            <Button size="sm" onClick={() => handleInitialAction(request.id, 'forward')}>Verify & Forward to Commission</Button>
+                            <Button size="sm" variant="destructive" onClick={() => handleInitialAction(request.id, 'reject')}>Reject & Return to HRO</Button>
+                          </>
+                        )}
                       </>
                     )}
                     {request.reviewStage === 'commission_review' && request.status === 'Request Received – Awaiting Commission Decision' && (

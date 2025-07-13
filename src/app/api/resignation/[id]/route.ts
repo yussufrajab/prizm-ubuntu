@@ -6,17 +6,21 @@ import { format } from 'date-fns';
 const updateSchema = z.object({
   status: z.string().optional(),
   reviewStage: z.string().optional(),
-  rejectionReason: z.string().optional(),
+  rejectionReason: z.string().nullable().optional(),
   reviewedById: z.string().optional(),
+  effectiveDate: z.string().datetime().optional(),
+  reason: z.string().optional(),
+  documents: z.array(z.string()).optional(),
 });
 
-export async function PUT(req: Request, { params }: { params: { id: string } }) {
+export async function PUT(req: Request, { params }: { params: Promise<{ id: string }> }) {
   try {
+    const { id } = await params;
     const body = await req.json();
     const validatedData = updateSchema.parse(body);
     
     const updatedRequest = await db.resignationRequest.update({
-      where: { id: params.id },
+      where: { id },
       data: validatedData,
       include: {
         employee: { select: { name: true, zanId: true, department: true, cadre: true, employmentDate: true, dateOfBirth: true, institution: { select: { name: true } }, payrollNumber: true, zssfNumber: true }},

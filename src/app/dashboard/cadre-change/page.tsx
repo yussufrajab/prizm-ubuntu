@@ -57,6 +57,15 @@ export default function CadreChangePage() {
   const [rejectionReasonInput, setRejectionReasonInput] = useState('');
   const [currentRequestToAction, setCurrentRequestToAction] = useState<CadreChangeRequest | null>(null);
 
+  const [isCorrectionModalOpen, setIsCorrectionModalOpen] = useState(false);
+  const [requestToCorrect, setRequestToCorrect] = useState<CadreChangeRequest | null>(null);
+  const [correctedCertificateFile, setCorrectedCertificateFile] = useState<FileList | null>(null);
+  const [correctedTcuFormFile, setCorrectedTcuFormFile] = useState<FileList | null>(null);
+  const [correctedLetterOfRequestFile, setCorrectedLetterOfRequestFile] = useState<FileList | null>(null);
+  const [correctedNewCadre, setCorrectedNewCadre] = useState('');
+  const [correctedReasonCadreChange, setCorrectedReasonCadreChange] = useState('');
+  const [correctedStudiedOutsideCountry, setCorrectedStudiedOutsideCountry] = useState(false);
+
   const [eligibilityError, setEligibilityError] = useState<string | null>(null);
   
   const [currentPage, setCurrentPage] = useState(1);
@@ -66,11 +75,13 @@ export default function CadreChangePage() {
     if (!user || !role) return;
     setIsLoading(true);
     try {
-      const response = await fetch(`/api/cadre-change?userId=${user.id}&userRole=${role}&userInstitutionId=${user.institutionId || ''}`);
+      const url = `/api/cadre-change?userId=${user.id}&userRole=${role}&userInstitutionId=${user.institutionId || ''}`;
+      const response = await fetch(url);
       if (!response.ok) throw new Error('Failed to fetch cadre change requests');
       const data = await response.json();
       setPendingRequests(data);
     } catch (error) {
+      console.error('Error fetching cadre change requests:', error);
       toast({ title: "Error", description: "Could not load cadre change requests.", variant: "destructive" });
     } finally {
       setIsLoading(false);
@@ -174,7 +185,7 @@ export default function CadreChangePage() {
     const payload = {
       employeeId: employeeDetails.id,
       submittedById: user.id,
-      status: role === ROLES.HHRMD ? 'Pending HHRMD Review' : 'Pending HRMO Review',
+      status: 'Pending HRMO/HHRMD Review',
       newCadre,
       reason: reasonCadreChange,
       documents: documentsList,
@@ -226,9 +237,16 @@ export default function CadreChangePage() {
       setRejectionReasonInput('');
       setIsRejectionModalOpen(true);
     } else if (action === 'forward') {
-      const payload = { status: "Request Received – Awaiting Commission Decision", reviewStage: 'commission_review' };
+      let payload;
+      if (role === ROLES.HRMO) {
+        payload = { status: "Pending HHRMD Review", reviewStage: 'HHRMD_review' };
+      } else if (role === ROLES.HHRMD) {
+        payload = { status: "Request Received – Awaiting Commission Decision", reviewStage: 'commission_review' };
+      } else {
+        return; // Should not happen based on UI logic
+      }
       const success = await handleUpdateRequest(requestId, payload);
-      if (success) toast({ title: "Request Forwarded", description: `Request for ${request.employee.name} forwarded to Commission.` });
+      if (success) toast({ title: "Request Forwarded", description: `Request for ${request.employee.name} forwarded.` });
     }
   };
 
@@ -257,12 +275,68 @@ export default function CadreChangePage() {
     }
   };
 
+  const handleResubmit = (request: CadreChangeRequest) => {
+    setRequestToCorrect(request);
+    setCorrectedNewCadre(request.newCadre);
+    setCorrectedReasonCadreChange(request.reason || '');
+    setCorrectedStudiedOutsideCountry(request.studiedOutsideCountry || false);
+    setCorrectedCertificateFile(null);
+    setCorrectedTcuFormFile(null);
+    setCorrectedLetterOfRequestFile(null);
+    setIsCorrectionModalOpen(true);
+  };
+
+  const handleConfirmResubmit = async (request: CadreChangeRequest | null) => {
+    if (!request || !user) return;
+
+    if (!correctedNewCadre || !correctedReasonCadreChange || !correctedLetterOfRequestFile || (correctedStudiedOutsideCountry && !correctedTcuFormFile)) {
+      toast({ title: "Submission Error", description: "All required fields and PDF documents must be provided.", variant: "destructive" });
+      return;
+    }
+
+    try {
+      let documentsList = ['Letter of Request'];
+      if (correctedCertificateFile) documentsList.push('Certificate');
+      if (correctedStudiedOutsideCountry) documentsList.push('TCU Form');
+
+      const response = await fetch(`/api/cadre-change/${request.id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          status: 'Pending HRMO/HHRMD Review',
+          reviewStage: 'initial',
+          newCadre: correctedNewCadre,
+          reason: correctedReasonCadreChange,
+          studiedOutsideCountry: correctedStudiedOutsideCountry,
+          documents: documentsList,
+          rejectionReason: null,
+          reviewedById: user.id
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to resubmit cadre change request');
+      }
+
+      toast({ title: "Success", description: `Cadre change request for ${request.employee.name} resubmitted successfully.` });
+      setIsCorrectionModalOpen(false);
+      setRequestToCorrect(null);
+      await fetchRequests();
+    } catch (error) {
+      console.error("[RESUBMIT_CADRE_CHANGE]", error);
+      toast({ title: "Error", description: "Failed to resubmit cadre change request.", variant: "destructive" });
+    }
+  };
+
   const paginatedRequests = pendingRequests.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
 
 
+  
   return (
     <div>
       <PageHeader title="Change of Cadre" description="Process employee cadre changes." />
@@ -365,6 +439,43 @@ export default function CadreChangePage() {
           )}
         </Card>
       )}
+      
+      {role === ROLES.HRO && pendingRequests.length > 0 && (
+        <Card className="mb-6 shadow-lg">
+          <CardHeader>
+            <CardTitle>Your Submitted Cadre Change Requests</CardTitle>
+            <CardDescription>Track the status of cadre change requests you have submitted.</CardDescription>
+          </CardHeader>
+          <CardContent>
+            {paginatedRequests.map((request) => (
+              <div key={request.id} className="mb-4 border p-4 rounded-md space-y-2 shadow-sm bg-background hover:shadow-md transition-shadow">
+                <h3 className="font-semibold text-base">Cadre Change for: {request.employee.name} (ZanID: {request.employee.zanId})</h3>
+                <p className="text-sm text-muted-foreground">From Cadre: {request.employee.cadre}</p>
+                <p className="text-sm text-muted-foreground">To Cadre: {request.newCadre}</p>
+                <p className="text-sm text-muted-foreground">Submitted: {request.createdAt ? format(parseISO(request.createdAt), 'PPP') : 'N/A'}</p>
+                <p className="text-sm"><span className="font-medium">Status:</span> <span className="text-primary">{request.status}</span></p>
+                {request.rejectionReason && <p className="text-sm text-destructive"><span className="font-medium">Rejection Reason:</span> {request.rejectionReason}</p>}
+                <div className="mt-3 pt-3 border-t flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
+                  <Button size="sm" variant="outline" onClick={() => { setSelectedRequest(request); setIsDetailsModalOpen(true); }}>View Details</Button>
+                  {role === ROLES.HRO && (request.status === 'Rejected by HRMO - Awaiting HRO Correction' || request.status === 'Rejected by HHRMD - Awaiting HRO Correction') && (
+                    <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white" onClick={() => handleResubmit(request)}>
+                      Correct and Resubmit
+                    </Button>
+                  )}
+                </div>
+              </div>
+            ))}
+            <Pagination
+              currentPage={currentPage}
+              totalPages={Math.ceil(pendingRequests.length / itemsPerPage)}
+              onPageChange={setCurrentPage}
+              totalItems={pendingRequests.length}
+              itemsPerPage={itemsPerPage}
+            />
+          </CardContent>
+        </Card>
+      )}
+      
       {(role === ROLES.HHRMD || role === ROLES.HRMO) && ( 
         <Card className="shadow-lg">
           <CardHeader>
@@ -385,10 +496,25 @@ export default function CadreChangePage() {
                   {request.rejectionReason && <p className="text-sm text-destructive"><span className="font-medium">Rejection Reason:</span> {request.rejectionReason}</p>}
                   <div className="mt-3 pt-3 border-t flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
                     <Button size="sm" variant="outline" onClick={() => { setSelectedRequest(request); setIsDetailsModalOpen(true); }}>View Details</Button>
-                    {request.reviewStage === 'initial' && (request.status.startsWith(`Pending ${role} Review`)) && (
+                    {(role === ROLES.HHRMD || role === ROLES.HRMO) && (
                       <>
-                        <Button size="sm" onClick={() => handleInitialAction(request.id, 'forward')}>Verify &amp; Forward to Commission</Button>
-                        <Button size="sm" variant="destructive" onClick={() => handleInitialAction(request.id, 'reject')}>Reject &amp; Return to HRO</Button>
+                        {request.reviewStage === 'initial' && (
+                          (role === ROLES.HRMO && (request.status === 'Pending HRMO Review' || request.status === 'Pending HRMO/HHRMD Review')) ||
+                          (role === ROLES.HHRMD && (request.status === 'Pending HRMO Review' || request.status === 'Pending HHRMD Review' || request.status === 'Pending HRMO/HHRMD Review'))
+                        ) && (
+                          <>
+                            <Button size="sm" onClick={() => handleInitialAction(request.id, 'forward')}>
+                              {role === ROLES.HRMO ? 'Verify & Forward to HHRMD' : 'Verify & Forward to Commission'}
+                            </Button>
+                            <Button size="sm" variant="destructive" onClick={() => handleInitialAction(request.id, 'reject')}>Reject &amp; Return to HRO</Button>
+                          </>
+                        )}
+                        {request.reviewStage === 'HHRMD_review' && (role === ROLES.HHRMD && request.status === 'Pending HHRMD Review') && (
+                          <>
+                            <Button size="sm" onClick={() => handleInitialAction(request.id, 'forward')}>Verify &amp; Forward to Commission</Button>
+                            <Button size="sm" variant="destructive" onClick={() => handleInitialAction(request.id, 'reject')}>Reject &amp; Return to HRO</Button>
+                          </>
+                        )}
                       </>
                     )}
                      {request.reviewStage === 'commission_review' && request.status === 'Request Received – Awaiting Commission Decision' && (
@@ -544,6 +670,90 @@ export default function CadreChangePage() {
                     <Button variant="destructive" onClick={handleRejectionSubmit} disabled={!rejectionReasonInput.trim()}>Submit Rejection</Button>
                 </DialogFooter>
             </DialogContent>
+        </Dialog>
+      )}
+
+      {requestToCorrect && (
+        <Dialog open={isCorrectionModalOpen} onOpenChange={setIsCorrectionModalOpen}>
+          <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto">
+            <DialogHeader>
+              <DialogTitle>Correct & Resubmit Cadre Change Request</DialogTitle>
+              <DialogDescription>
+                Please update the details and upload corrected documents for <strong>{requestToCorrect.employee.name}</strong> (ZanID: {requestToCorrect.employee.zanId}).
+              </DialogDescription>
+            </DialogHeader>
+            <div className="py-4 space-y-4">
+              <Alert variant="default">
+                <AlertTriangle className="h-4 w-4" />
+                <AlertTitle>Important</AlertTitle>
+                <AlertDescription>
+                  Update the cadre details and re-attach all required PDF documents, even if only one needed correction.
+                </AlertDescription>
+              </Alert>
+              
+              <div className="space-y-4">
+                <div>
+                  <Label htmlFor="correctedNewCadre">Proposed New Cadre</Label>
+                  <Input 
+                    id="correctedNewCadre" 
+                    placeholder="e.g., Senior Human Resource Officer" 
+                    value={correctedNewCadre} 
+                    onChange={(e) => setCorrectedNewCadre(e.target.value)} 
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="correctedReasonCadreChange">Reason for Cadre Change & Qualifications</Label>
+                  <Textarea 
+                    id="correctedReasonCadreChange" 
+                    placeholder="Explain the reason and list relevant qualifications" 
+                    value={correctedReasonCadreChange} 
+                    onChange={(e) => setCorrectedReasonCadreChange(e.target.value)} 
+                  />
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Checkbox 
+                    id="correctedStudiedOutsideCountry" 
+                    checked={correctedStudiedOutsideCountry} 
+                    onCheckedChange={(checked) => setCorrectedStudiedOutsideCountry(checked as boolean)} 
+                  />
+                  <Label htmlFor="correctedStudiedOutsideCountry" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                    Employee studied outside the country? (Requires TCU Form)
+                  </Label>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <h4 className="font-semibold text-base">Required Documents (PDF Only)</h4>
+                <div>
+                  <Label htmlFor="correctedCertificateFile" className="flex items-center mb-1"><Award className="mr-2 h-4 w-4 text-primary" />Upload Certificate (Optional)</Label>
+                  <Input id="correctedCertificateFile" type="file" onChange={(e) => setCorrectedCertificateFile(e.target.files)} accept=".pdf" />
+                </div>
+                {correctedStudiedOutsideCountry && (
+                  <div>
+                    <Label htmlFor="correctedTcuFormFile" className="flex items-center mb-1"><ChevronsUpDown className="mr-2 h-4 w-4 text-primary" />Upload TCU Form (Required)</Label>
+                    <Input id="correctedTcuFormFile" type="file" onChange={(e) => setCorrectedTcuFormFile(e.target.files)} accept=".pdf" />
+                  </div>
+                )}
+                <div>
+                  <Label htmlFor="correctedLetterOfRequestFile" className="flex items-center mb-1"><FileText className="mr-2 h-4 w-4 text-primary" />Upload Letter of Request (Required)</Label>
+                  <Input id="correctedLetterOfRequestFile" type="file" onChange={(e) => setCorrectedLetterOfRequestFile(e.target.files)} accept=".pdf" />
+                </div>
+              </div>
+              
+              {requestToCorrect.rejectionReason && (
+                <div className="mt-4 p-3 bg-destructive/10 border border-destructive/20 rounded-md">
+                  <Label className="font-semibold text-destructive">Previous Rejection Reason:</Label>
+                  <p className="text-sm text-destructive mt-1">{requestToCorrect.rejectionReason}</p>
+                </div>
+              )}
+            </div>
+            <DialogFooter>
+              <Button type="button" variant="outline" onClick={() => setIsCorrectionModalOpen(false)}>Cancel</Button>
+              <Button onClick={() => handleConfirmResubmit(requestToCorrect)}>
+                Resubmit Request
+              </Button>
+            </DialogFooter>
+          </DialogContent>
         </Dialog>
       )}
     </div>

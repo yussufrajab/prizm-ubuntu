@@ -55,6 +55,13 @@ export default function ResignationPage() {
 
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
+
+  const [isCorrectionModalOpen, setIsCorrectionModalOpen] = useState(false);
+  const [requestToCorrect, setRequestToCorrect] = useState<ResignationRequest | null>(null);
+  const [correctedEffectiveDate, setCorrectedEffectiveDate] = useState('');
+  const [correctedReason, setCorrectedReason] = useState('');
+  const [correctedLetterOfRequestFile, setCorrectedLetterOfRequestFile] = useState<FileList | null>(null);
+  const [correctedNoticeOrReceiptFile, setCorrectedNoticeOrReceiptFile] = useState<FileList | null>(null);
   
   const fetchRequests = async () => {
     if (!user || !role) return;
@@ -148,7 +155,7 @@ export default function ResignationPage() {
     const payload = {
         employeeId: employeeDetails.id,
         submittedById: user.id,
-        status: role === ROLES.HHRMD ? 'Pending HHRMD Acknowledgement' : 'Pending HRMO Acknowledgement',
+        status: 'Pending HRMO/HHRMD Acknowledgement',
         effectiveDate: new Date(effectiveDate).toISOString(),
         reason: reason,
         documents: documentsList
@@ -193,9 +200,16 @@ export default function ResignationPage() {
   };
 
   const handleAcknowledge = async (requestId: string) => {
-    const payload = { status: "Acknowledged - Awaiting Commission Decision", reviewStage: 'commission_review' };
+    let payload;
+    if (role === ROLES.HRMO) {
+      payload = { status: "Pending HHRMD Acknowledgement", reviewStage: 'HHRMD_review' };
+    } else if (role === ROLES.HHRMD) {
+      payload = { status: "Forwarded to Commission for Acknowledgment", reviewStage: 'commission_review' };
+    } else {
+      return; // Should not happen based on UI logic
+    }
     const success = await handleUpdateRequest(requestId, payload);
-    if(success) toast({ title: "Request Acknowledged", description: "The resignation has been acknowledged and forwarded." });
+    if(success) toast({ title: "Request Forwarded", description: "The resignation has been forwarded." });
   };
   
   const handleFlagIssue = (request: ResignationRequest) => {
@@ -225,6 +239,58 @@ export default function ResignationPage() {
     const success = await handleUpdateRequest(requestId, payload);
     if (success) {
         toast({ title: `Commission Decision: ${decision === 'approved' ? 'Approved' : 'Rejected'}`, description: `Request ${requestId} has been updated.` });
+    }
+  };
+
+  const handleCorrection = (request: ResignationRequest) => {
+    setRequestToCorrect(request);
+    setCorrectedEffectiveDate(request.effectiveDate ? format(parseISO(request.effectiveDate), 'yyyy-MM-dd') : '');
+    setCorrectedReason(request.reason || '');
+    setCorrectedLetterOfRequestFile(null);
+    setCorrectedNoticeOrReceiptFile(null);
+    
+    const fileInputs = document.querySelectorAll('input[type="file"]');
+    fileInputs.forEach(input => (input as HTMLInputElement).value = '');
+    
+    setIsCorrectionModalOpen(true);
+  };
+
+  const handleConfirmResubmit = async (request: ResignationRequest | null) => {
+    if (!request || !user) {
+      toast({ title: "Error", description: "Request or user details are missing.", variant: "destructive" });
+      return;
+    }
+
+    if (!correctedEffectiveDate || !correctedLetterOfRequestFile || !correctedNoticeOrReceiptFile) {
+      toast({ title: "Validation Error", description: "Please fill all required fields and upload required documents.", variant: "destructive" });
+      return;
+    }
+
+    const documentsList = ['Letter of Request', '3 Month Notice/Receipt'];
+
+    try {
+      const response = await fetch(`/api/resignation/${request.id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          status: 'Pending HRMO/HHRMD Acknowledgement',
+          reviewStage: 'initial',
+          effectiveDate: new Date(correctedEffectiveDate).toISOString(),
+          reason: correctedReason,
+          documents: documentsList,
+          rejectionReason: null,
+          reviewedById: user.id
+        }),
+      });
+
+      if (!response.ok) throw new Error('Failed to update request');
+
+      await fetchRequests();
+      toast({ title: "Request Corrected", description: `Resignation request for ${request.employee.name} has been corrected and resubmitted.` });
+      setIsCorrectionModalOpen(false);
+      setRequestToCorrect(null);
+    } catch (error) {
+      toast({ title: "Update Failed", description: "Could not update the request.", variant: "destructive" });
     }
   };
 
@@ -313,6 +379,42 @@ export default function ResignationPage() {
           )}
         </Card>
       )}
+
+      {role === ROLES.HRO && (
+        <Card className="mb-6 shadow-lg">
+          <CardHeader>
+            <CardTitle>Your Submitted Resignation Requests</CardTitle>
+            <CardDescription>Track the status of resignation requests you have submitted.</CardDescription>
+          </CardHeader>
+          <CardContent>
+            {isLoading ? (
+              <div className="flex justify-center items-center h-40"><Loader2 className="h-8 w-8 animate-spin" /></div>
+            ) : pendingRequests.length > 0 ? (
+              pendingRequests.map((request) => (
+                <div key={request.id} className="mb-4 border p-4 rounded-md space-y-2 shadow-sm bg-background hover:shadow-md transition-shadow">
+                  <h3 className="font-semibold text-base">Resignation for: {request.employee.name} (ZanID: {request.employee.zanId})</h3>
+                  <p className="text-sm text-muted-foreground">Effective Date: {request.effectiveDate ? format(parseISO(request.effectiveDate), 'PPP') : 'N/A'}</p>
+                  {request.reason && <p className="text-sm text-muted-foreground">Reason: {request.reason}</p>}
+                  <p className="text-sm text-muted-foreground">Submitted: {request.createdAt ? format(parseISO(request.createdAt), 'PPP') : 'N/A'}</p>
+                  <p className="text-sm"><span className="font-medium">Status:</span> <span className="text-primary">{request.status}</span></p>
+                  {request.rejectionReason && <p className="text-sm text-destructive"><span className="font-medium">Rejection Reason:</span> {request.rejectionReason}</p>}
+                  <div className="mt-3 pt-3 border-t flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
+                    <Button size="sm" variant="outline" onClick={() => { setSelectedRequest(request); setIsDetailsModalOpen(true); }}>View Details</Button>
+                    {request.status.includes('Rejected') && request.status.includes('Awaiting HRO') && (
+                      <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white" onClick={() => handleCorrection(request)}>
+                        Correct & Resubmit
+                      </Button>
+                    )}
+                  </div>
+                </div>
+              ))
+            ) : (
+              <p className="text-muted-foreground">No resignation requests found.</p>
+            )}
+          </CardContent>
+        </Card>
+      )}
+
       {(role === ROLES.HHRMD || role === ROLES.HRMO) && ( 
         <Card className="shadow-lg">
           <CardHeader>
@@ -333,10 +435,25 @@ export default function ResignationPage() {
                   {request.rejectionReason && <p className="text-sm text-destructive"><span className="font-medium">Rejection Reason:</span> {request.rejectionReason}</p>}
                   <div className="mt-3 pt-3 border-t flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
                     <Button size="sm" variant="outline" onClick={() => { setSelectedRequest(request); setIsDetailsModalOpen(true); }}>View Details</Button>
-                    {request.reviewStage === 'initial' && request.status.startsWith(`Pending ${role} Acknowledgement`) && (
+                    {(role === ROLES.HHRMD || role === ROLES.HRMO) && (
                       <>
-                        <Button size="sm" onClick={() => handleAcknowledge(request.id)}>Acknowledge & Forward</Button>
-                        <Button size="sm" variant="destructive" onClick={() => handleFlagIssue(request)}>Flag Issue & Return to HRO</Button>
+                        {request.reviewStage === 'initial' && (
+                          (role === ROLES.HRMO && (request.status === 'Pending HRMO Acknowledgement' || request.status === 'Pending HRMO/HHRMD Acknowledgement')) ||
+                          (role === ROLES.HHRMD && (request.status === 'Pending HRMO Acknowledgement' || request.status === 'Pending HHRMD Acknowledgement' || request.status === 'Pending HRMO/HHRMD Acknowledgement'))
+                        ) && (
+                          <>
+                            <Button size="sm" onClick={() => handleAcknowledge(request.id)}>
+                              {role === ROLES.HRMO ? 'Acknowledge & Forward to HHRMD' : 'Acknowledge & Forward to Commission'}
+                            </Button>
+                            <Button size="sm" variant="destructive" onClick={() => handleFlagIssue(request)}>Flag Issue & Return to HRO</Button>
+                          </>
+                        )}
+                        {request.reviewStage === 'HHRMD_review' && (role === ROLES.HHRMD && request.status === 'Pending HHRMD Acknowledgement') && (
+                          <>
+                            <Button size="sm" onClick={() => handleAcknowledge(request.id)}>Acknowledge & Forward to Commission</Button>
+                            <Button size="sm" variant="destructive" onClick={() => handleFlagIssue(request)}>Flag Issue & Return to HRO</Button>
+                          </>
+                        )}
                       </>
                     )}
                     {request.reviewStage === 'commission_review' && (
@@ -488,6 +605,87 @@ export default function ResignationPage() {
                     <Button variant="destructive" onClick={handleRejectionSubmit} disabled={!rejectionReasonInput.trim()}>Submit Issue</Button>
                 </DialogFooter>
             </DialogContent>
+        </Dialog>
+      )}
+
+      {requestToCorrect && (
+        <Dialog open={isCorrectionModalOpen} onOpenChange={setIsCorrectionModalOpen}>
+          <DialogContent className="sm:max-w-2xl max-h-[80vh] overflow-y-auto">
+            <DialogHeader>
+              <DialogTitle>Correct Resignation Request: {requestToCorrect.id}</DialogTitle>
+              <DialogDescription>
+                Update the details for <strong>{requestToCorrect.employee.name}</strong>'s resignation request and upload new documents.
+              </DialogDescription>
+            </DialogHeader>
+            <div className="space-y-6 py-4">
+              <div className="space-y-4">
+                <div>
+                  <Label htmlFor="correctedEffectiveDate" className="flex items-center">
+                    <CalendarDays className="mr-2 h-4 w-4 text-primary" />
+                    Effective Date of Resignation
+                  </Label>
+                  <Input 
+                    id="correctedEffectiveDate" 
+                    type="date" 
+                    value={correctedEffectiveDate} 
+                    onChange={(e) => setCorrectedEffectiveDate(e.target.value)} 
+                    min={minEffectiveDate}
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="correctedReason">Reason for Resignation (Optional)</Label>
+                  <Textarea 
+                    id="correctedReason" 
+                    placeholder="Optional: Enter reason stated by employee" 
+                    value={correctedReason} 
+                    onChange={(e) => setCorrectedReason(e.target.value)} 
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="correctedLetterOfRequest" className="flex items-center">
+                    <FileText className="mr-2 h-4 w-4 text-primary" />
+                    Upload Letter of Request (Required, PDF Only)
+                  </Label>
+                  <Input 
+                    id="correctedLetterOfRequest" 
+                    type="file" 
+                    onChange={(e) => setCorrectedLetterOfRequestFile(e.target.files)} 
+                    accept=".pdf"
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="correctedNoticeOrReceipt" className="flex items-center">
+                    <FileText className="mr-2 h-4 w-4 text-primary" />
+                    Upload 3 months resignation notice or receipt (Required, PDF Only)
+                  </Label>
+                  <Input 
+                    id="correctedNoticeOrReceipt" 
+                    type="file" 
+                    onChange={(e) => setCorrectedNoticeOrReceiptFile(e.target.files)} 
+                    accept=".pdf"
+                  />
+                </div>
+              </div>
+            </div>
+            <DialogFooter className="flex flex-col sm:flex-row gap-2">
+              <Button 
+                variant="outline" 
+                onClick={() => { 
+                  setIsCorrectionModalOpen(false); 
+                  setRequestToCorrect(null); 
+                }}
+              >
+                Cancel
+              </Button>
+              <Button 
+                onClick={() => handleConfirmResubmit(requestToCorrect)}
+                disabled={!correctedEffectiveDate || !correctedLetterOfRequestFile || !correctedNoticeOrReceiptFile}
+                className="bg-blue-600 hover:bg-blue-700 text-white"
+              >
+                Resubmit Corrected Request
+              </Button>
+            </DialogFooter>
+          </DialogContent>
         </Dialog>
       )}
     </div>

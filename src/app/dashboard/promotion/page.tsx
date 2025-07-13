@@ -506,11 +506,11 @@ export default function PromotionPage() {
                             )}
                             {request.reviewStage === 'commission_review' && (
                               <>
-                                <Button size="sm" className="bg-green-600 hover:bg-green-700 text-white" onClick={() => handleCommissionDecision(request.id, 'approved')}>Approve</Button>
-                                <Button size="sm" className="bg-red-600 hover:bg-red-700 text-white" onClick={() => handleCommissionDecision(request.id, 'rejected')}>Reject</Button>
+                                <Button size="sm" className="bg-green-600 hover:bg-green-700 text-white" onClick={() => handleCommissionDecision(request.id, 'approved')}>Approved by Commission</Button>
+                                <Button size="sm" className="bg-red-600 hover:bg-red-700 text-white" onClick={() => handleCommissionDecision(request.id, 'rejected')}>Rejected by Commission</Button>
                               </>
                             )}
-                            {(request.reviewStage === 'initial' || request.reviewStage === 'commission_review') && (
+                            {request.reviewStage === 'initial' && (
                               <Button size="sm" className="bg-red-600 hover:bg-red-700 text-white" onClick={() => handleInitialAction(request.id, 'reject')}>Reject & Return to HRO</Button>
                             )}
                           </>

@@ -5,8 +5,12 @@ import { z } from 'zod';
 const updateSchema = z.object({
   status: z.string().optional(),
   reviewStage: z.string().optional(),
-  rejectionReason: z.string().optional(),
+  rejectionReason: z.string().nullable().optional(),
   reviewedById: z.string().optional(),
+  newCadre: z.string().optional(),
+  reason: z.string().optional(),
+  studiedOutsideCountry: z.boolean().optional(),
+  documents: z.array(z.string()).optional(),
 });
 
 export async function PUT(req: Request, { params }: { params: { id: string } }) {

@@ -57,15 +57,13 @@ export async function GET(req: Request) {
     const whereClause: any = {};
     
     if (userRole === ROLES.HRO) {
-        if (!userInstitutionId) {
-             return NextResponse.json([]);
-        } else {
-             whereClause.employee = { institutionId: userInstitutionId };
-        }
-    } else if (userRole === ROLES.HHRMD) {
-      whereClause.status = { contains: 'HHRMD' };
+        whereClause.submittedById = userId;
     } else if (userRole === ROLES.HRMO) {
-       whereClause.status = { contains: 'HRMO' };
+        whereClause.reviewStage = { in: ['initial', 'commission_review'] };
+        whereClause.status = { in: ['Pending HRMO Acknowledgement', 'Pending HRMO/HHRMD Acknowledgement', 'Forwarded to Commission for Acknowledgment'] };
+    } else if (userRole === ROLES.HHRMD) {
+        whereClause.reviewStage = { in: ['initial', 'HHRMD_review', 'commission_review'] };
+        whereClause.status = { in: ['Pending HRMO Acknowledgement', 'Pending HHRMD Acknowledgement', 'Pending HRMO/HHRMD Acknowledgement', 'Forwarded to Commission for Acknowledgment'] };
     } else {
         whereClause.status = { notIn: ["Approved by Commission", "Rejected by Commission"] };
     }

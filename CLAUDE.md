@@ -98,3 +98,86 @@ The project includes AI capabilities through Google Genkit:
 - Complaint rewriting functionality
 - Request analysis
 - Development server available via `npm run genkit:dev`
+
+## Module Review Summary (2025-07-13)
+
+### Architecture Overview
+- **Next.js 14** app router with TypeScript
+- **PostgreSQL** database via Prisma ORM
+- **Zustand** for state management with localStorage persistence
+- **Google Genkit** for AI capabilities using Gemini 2.0 Flash model
+- **Tailwind CSS** with Radix UI component library (shadcn/ui)
+
+### Key Modules Reviewed
+
+1. **Authentication System** (`src/store/auth-store.ts`)
+   - Custom authentication using bcrypt for password hashing
+   - Role-based access control with 9 distinct user roles
+   - Persistent session storage via Zustand middleware
+   - Login API endpoint at `/api/auth/login`
+
+2. **Database Models** (`prisma/schema.prisma`)
+   - **Core Models**: User, Employee, Institution
+   - **Request Models**: 8 types including ConfirmationRequest, PromotionRequest, LwopRequest, CadreChangeRequest, RetirementRequest, ResignationRequest, ServiceExtensionRequest, SeparationRequest
+   - **Support Models**: Complaint tracking, Notification system, EmployeeCertificate
+   - All requests follow similar pattern with status, reviewStage, documents, and relationships
+
+3. **Dashboard System** (`src/app/dashboard/page.tsx`)
+   - Role-based dashboard views with real-time statistics
+   - Displays pending requests across all categories
+   - Recent activities tracking with status badges
+   - Urgent actions module specifically for HRO/HRRP roles
+   - Automatic redirection for EMPLOYEE/PO roles to profile page
+
+4. **Navigation Structure** (`src/lib/navigation.ts`)
+   - Comprehensive role-based navigation system
+   - 16 main navigation items with role restrictions
+   - Nested navigation for Admin Management and AI Tools
+   - Icons from Lucide React library
+
+5. **API Structure** (`src/app/api/`)
+   - RESTful endpoints for all request types
+   - Dashboard summary endpoint aggregates statistics
+   - Employee search and urgent actions endpoints
+   - Consistent error handling and response patterns
+
+6. **AI Integration** (`src/ai/`)
+   - **Complaint Rewriter** (`flows/complaint-rewriter.ts`): Standardizes employee complaints to meet civil service commission standards
+   - **Request Analyzer** (`flows/request-analyzer.ts`): Categorizes requests and suggests appropriate reviewers
+   - Uses Google's Gemini 2.0 Flash model via Genkit
+   - Server-side execution with 'use server' directive
+
+7. **State Management & Hooks**
+   - **Auth Store** (`src/store/auth-store.ts`): Zustand store with persist middleware
+   - **useAuth Hook** (`src/hooks/use-auth.ts`): Provides loading state and hydration handling
+   - Additional hooks for mobile detection and toast notifications
+
+### User Roles & Permissions
+- **HRO** (Human Resource Officer): Full access to HR processes
+- **HHRMD** (Head of HR Management Department): Oversight and approval
+- **HRMO** (Human Resource Management Officer): HR operations
+- **DO** (Director Officer): Complaints and terminations
+- **EMPLOYEE**: Limited access to profile and complaints
+- **CSCS** (Civil Service Commission Secretary): Reports and audit trail
+- **HRRP** (HR Representative): Urgent actions and tracking
+- **PO** (Payroll Officer): Profile and reports access
+- **Admin**: System administration, user and institution management
+
+### Security Considerations
+- Password hashing with bcryptjs
+- Role-based access control at navigation and API levels
+- Session persistence in localStorage (consider security implications)
+- No exposed secrets in reviewed code
+
+### Performance Optimizations
+- Lazy loading with dynamic imports
+- Skeleton loading states for better UX
+- Parallel data fetching in dashboard
+- Efficient database queries with Prisma
+
+### Development Workflow
+- TypeScript for type safety
+- ESLint for code quality
+- Prisma migrations for database versioning
+- Separate development server for AI features
+- Multiple seed scripts for different data scenarios

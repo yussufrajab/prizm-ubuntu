@@ -57,6 +57,14 @@ export default function ServiceExtensionPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
+  const [isCorrectionModalOpen, setIsCorrectionModalOpen] = useState(false);
+  const [requestToCorrect, setRequestToCorrect] = useState<ServiceExtensionRequest | null>(null);
+  const [correctedCurrentRetirementDate, setCorrectedCurrentRetirementDate] = useState('');
+  const [correctedRequestedExtensionPeriod, setCorrectedRequestedExtensionPeriod] = useState('');
+  const [correctedJustification, setCorrectedJustification] = useState('');
+  const [correctedLetterOfRequestFile, setCorrectedLetterOfRequestFile] = useState<FileList | null>(null);
+  const [correctedEmployeeConsentLetterFile, setCorrectedEmployeeConsentLetterFile] = useState<FileList | null>(null);
+
   const fetchRequests = async () => {
     if (!user || !role) return;
     setIsLoading(true);
@@ -165,7 +173,7 @@ export default function ServiceExtensionPage() {
     const payload = {
         employeeId: employeeDetails.id,
         submittedById: user.id,
-        status: role === ROLES.HHRMD ? 'Pending HHRMD Review' : 'Pending HRMO Review',
+        status: 'Pending HRMO/HHRMD Review',
         currentRetirementDate: new Date(currentRetirementDate).toISOString(),
         requestedExtensionPeriod,
         justification,
@@ -229,6 +237,60 @@ export default function ServiceExtensionPage() {
     const success = await handleUpdateRequest(requestId, payload);
     if (success) {
         toast({ title: `Commission Decision: ${decision === 'approved' ? 'Approved' : 'Rejected'}`, description: `Request ${requestId} has been updated.` });
+    }
+  };
+
+  const handleCorrection = (request: ServiceExtensionRequest) => {
+    setRequestToCorrect(request);
+    setCorrectedCurrentRetirementDate(request.currentRetirementDate ? format(parseISO(request.currentRetirementDate), 'yyyy-MM-dd') : '');
+    setCorrectedRequestedExtensionPeriod(request.requestedExtensionPeriod || '');
+    setCorrectedJustification(request.justification || '');
+    setCorrectedLetterOfRequestFile(null);
+    setCorrectedEmployeeConsentLetterFile(null);
+    
+    const fileInputs = document.querySelectorAll('input[type="file"]');
+    fileInputs.forEach(input => (input as HTMLInputElement).value = '');
+    
+    setIsCorrectionModalOpen(true);
+  };
+
+  const handleConfirmResubmit = async (request: ServiceExtensionRequest | null) => {
+    if (!request || !user) {
+      toast({ title: "Error", description: "Request or user details are missing.", variant: "destructive" });
+      return;
+    }
+
+    if (!correctedCurrentRetirementDate || !correctedRequestedExtensionPeriod || !correctedJustification || !correctedLetterOfRequestFile || !correctedEmployeeConsentLetterFile) {
+      toast({ title: "Validation Error", description: "Please fill all required fields and upload required documents.", variant: "destructive" });
+      return;
+    }
+
+    const documentsList = ['Letter of Request', 'Employee Consent Letter'];
+
+    try {
+      const response = await fetch(`/api/service-extension/${request.id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          status: 'Pending HRMO/HHRMD Review',
+          reviewStage: 'initial',
+          currentRetirementDate: new Date(correctedCurrentRetirementDate).toISOString(),
+          requestedExtensionPeriod: correctedRequestedExtensionPeriod,
+          justification: correctedJustification,
+          documents: documentsList,
+          rejectionReason: null,
+          reviewedById: user.id
+        }),
+      });
+
+      if (!response.ok) throw new Error('Failed to update request');
+
+      await fetchRequests();
+      toast({ title: "Request Corrected", description: `Service extension request for ${request.employee.name} has been corrected and resubmitted.` });
+      setIsCorrectionModalOpen(false);
+      setRequestToCorrect(null);
+    } catch (error) {
+      toast({ title: "Update Failed", description: "Could not update the request.", variant: "destructive" });
     }
   };
 
@@ -324,6 +386,42 @@ export default function ServiceExtensionPage() {
           )}
         </Card>
       )}
+
+      {role === ROLES.HRO && (
+        <Card className="mb-6 shadow-lg">
+          <CardHeader>
+            <CardTitle>Your Submitted Service Extension Requests</CardTitle>
+            <CardDescription>Track the status of service extension requests you have submitted.</CardDescription>
+          </CardHeader>
+          <CardContent>
+            {isLoading ? (
+              <div className="flex justify-center items-center h-40"><Loader2 className="h-8 w-8 animate-spin" /></div>
+            ) : pendingRequests.length > 0 ? (
+              pendingRequests.map((request) => (
+                <div key={request.id} className="mb-4 border p-4 rounded-md space-y-2 shadow-sm bg-background hover:shadow-md transition-shadow">
+                  <h3 className="font-semibold text-base">Service Extension for: {request.employee.name} (ZanID: {request.employee.zanId})</h3>
+                  <p className="text-sm text-muted-foreground">Current Retirement: {request.currentRetirementDate ? format(parseISO(request.currentRetirementDate), 'PPP') : 'N/A'}</p>
+                  <p className="text-sm text-muted-foreground">Extension Requested: {request.requestedExtensionPeriod}</p>
+                  <p className="text-sm text-muted-foreground">Submitted: {request.createdAt ? format(parseISO(request.createdAt), 'PPP') : 'N/A'}</p>
+                  <p className="text-sm"><span className="font-medium">Status:</span> <span className="text-primary">{request.status}</span></p>
+                  {request.rejectionReason && <p className="text-sm text-destructive"><span className="font-medium">Rejection Reason:</span> {request.rejectionReason}</p>}
+                  <div className="mt-3 pt-3 border-t flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
+                    <Button size="sm" variant="outline" onClick={() => { setSelectedRequest(request); setIsDetailsModalOpen(true); }}>View Details</Button>
+                    {request.status.includes('Rejected') && request.status.includes('Awaiting HRO') && (
+                      <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white" onClick={() => handleCorrection(request)}>
+                        Correct & Resubmit
+                      </Button>
+                    )}
+                  </div>
+                </div>
+              ))
+            ) : (
+              <p className="text-muted-foreground">No service extension requests found.</p>
+            )}
+          </CardContent>
+        </Card>
+      )}
+
       {(role === ROLES.HHRMD || role === ROLES.HRMO) && ( 
         <Card className="shadow-lg">
           <CardHeader>
@@ -502,6 +600,96 @@ export default function ServiceExtensionPage() {
                     <Button variant="destructive" onClick={handleRejectionSubmit} disabled={!rejectionReasonInput.trim()}>Submit Rejection</Button>
                 </DialogFooter>
             </DialogContent>
+        </Dialog>
+      )}
+
+      {requestToCorrect && (
+        <Dialog open={isCorrectionModalOpen} onOpenChange={setIsCorrectionModalOpen}>
+          <DialogContent className="sm:max-w-2xl max-h-[80vh] overflow-y-auto">
+            <DialogHeader>
+              <DialogTitle>Correct Service Extension Request: {requestToCorrect.id}</DialogTitle>
+              <DialogDescription>
+                Update the details for <strong>{requestToCorrect.employee.name}</strong>'s service extension request and upload new documents.
+              </DialogDescription>
+            </DialogHeader>
+            <div className="space-y-6 py-4">
+              <div className="space-y-4">
+                <div>
+                  <Label htmlFor="correctedCurrentRetirementDate" className="flex items-center">
+                    <CalendarDays className="mr-2 h-4 w-4 text-primary" />
+                    Current Retirement Date
+                  </Label>
+                  <Input 
+                    id="correctedCurrentRetirementDate" 
+                    type="date" 
+                    value={correctedCurrentRetirementDate} 
+                    onChange={(e) => setCorrectedCurrentRetirementDate(e.target.value)} 
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="correctedRequestedExtensionPeriod">Requested Extension Period</Label>
+                  <Input 
+                    id="correctedRequestedExtensionPeriod" 
+                    placeholder="e.g., 1 year, 6 months" 
+                    value={correctedRequestedExtensionPeriod} 
+                    onChange={(e) => setCorrectedRequestedExtensionPeriod(e.target.value)} 
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="correctedJustification">Justification for Extension</Label>
+                  <Textarea 
+                    id="correctedJustification" 
+                    placeholder="Provide detailed justification for the service extension" 
+                    value={correctedJustification} 
+                    onChange={(e) => setCorrectedJustification(e.target.value)} 
+                    rows={4}
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="correctedLetterOfRequest" className="flex items-center">
+                    <FileText className="mr-2 h-4 w-4 text-primary" />
+                    Upload Letter of Request (Required, PDF Only)
+                  </Label>
+                  <Input 
+                    id="correctedLetterOfRequest" 
+                    type="file" 
+                    onChange={(e) => setCorrectedLetterOfRequestFile(e.target.files)} 
+                    accept=".pdf"
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="correctedEmployeeConsentLetter" className="flex items-center">
+                    <CheckSquare className="mr-2 h-4 w-4 text-primary" />
+                    Upload Employee Consent Letter (Required, PDF Only)
+                  </Label>
+                  <Input 
+                    id="correctedEmployeeConsentLetter" 
+                    type="file" 
+                    onChange={(e) => setCorrectedEmployeeConsentLetterFile(e.target.files)} 
+                    accept=".pdf"
+                  />
+                </div>
+              </div>
+            </div>
+            <DialogFooter className="flex flex-col sm:flex-row gap-2">
+              <Button 
+                variant="outline" 
+                onClick={() => { 
+                  setIsCorrectionModalOpen(false); 
+                  setRequestToCorrect(null); 
+                }}
+              >
+                Cancel
+              </Button>
+              <Button 
+                onClick={() => handleConfirmResubmit(requestToCorrect)}
+                disabled={!correctedCurrentRetirementDate || !correctedRequestedExtensionPeriod || !correctedJustification || !correctedLetterOfRequestFile || !correctedEmployeeConsentLetterFile}
+                className="bg-blue-600 hover:bg-blue-700 text-white"
+              >
+                Resubmit Corrected Request
+              </Button>
+            </DialogFooter>
+          </DialogContent>
         </Dialog>
       )}
     </div>
