@@ -1,0 +1,3773 @@
+
+> nextn@0.1.0 dev
+> next dev -p 9002
+
+   ▲ Next.js 15.2.3
+   - Local:        http://localhost:9002
+   - Network:      http://10.255.255.254:9002
+   - Environments: .env
+
+ ✓ Starting...
+ ✓ Ready in 13.3s
+ ○ Compiling / ...
+ ✓ Compiled / in 8.2s (808 modules)
+ GET / 200 in 9279ms
+ ✓ Compiled in 1036ms (353 modules)
+ ✓ Compiled in 73ms (339 modules)
+ ○ Compiling /dashboard/profile ...
+ ✓ Compiled /dashboard/profile in 2.1s (1180 modules)
+ GET /dashboard/profile 200 in 5247ms
+ ○ Compiling /api/employees ...
+ ✓ Compiled /api/employees in 823ms (1207 modules)
+ GET /favicon.ico 200 in 1297ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 1390ms
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 1365ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 152ms
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 186ms
+ GET /favicon.ico 200 in 339ms
+ ○ Compiling /dashboard/promotion ...
+ ✓ Compiled /dashboard/promotion in 905ms (1298 modules)
+ GET /dashboard/promotion 200 in 1291ms
+ GET /favicon.ico 200 in 321ms
+ ○ Compiling /api/promotions ...
+ ✓ Compiled /api/promotions in 838ms (1300 modules)
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 1040ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 1073ms
+ GET /api/promotions?userId=cmd059ir10002e6d86l802ljc&userRole=HHRMD&userInstitutionId=cmd059ion0000e6d85kexfukl 200 in 1167ms
+ GET /api/promotions?userId=cmd059ir10002e6d86l802ljc&userRole=HHRMD&userInstitutionId=cmd059ion0000e6d85kexfukl 200 in 1142ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 119ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 95ms
+ GET /dashboard/promotion 200 in 220ms
+ GET /api/promotions?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 97ms
+ GET /api/promotions?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 79ms
+ ○ Compiling /api/employees/search ...
+ ✓ Compiled /api/employees/search in 659ms (1293 modules)
+ GET /api/employees/search?zanId=190475-002-002 200 in 932ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 208ms
+ POST /api/promotions 201 in 121ms
+ GET /api/promotions?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 74ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 75ms
+ GET /dashboard/promotion 200 in 280ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 157ms
+ GET /api/promotions?userId=cmd059ir10002e6d86l802ljc&userRole=HHRMD&userInstitutionId=cmd059ion0000e6d85kexfukl 200 in 180ms
+ GET /api/promotions?userId=cmd059ir10002e6d86l802ljc&userRole=HHRMD&userInstitutionId=cmd059ion0000e6d85kexfukl 200 in 151ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 159ms
+ PATCH /api/promotions 200 in 258ms
+ GET /api/promotions?userId=cmd059ir10002e6d86l802ljc&userRole=HHRMD&userInstitutionId=cmd059ion0000e6d85kexfukl 200 in 102ms
+ GET /dashboard/promotion 200 in 198ms
+ ✓ Compiled /favicon.ico in 471ms (743 modules)
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 806ms
+ GET /api/promotions?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 808ms
+ GET /favicon.ico 200 in 1022ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 140ms
+ GET /api/promotions?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 165ms
+ GET /favicon.ico 200 in 303ms
+ PATCH /api/promotions 200 in 198ms
+ GET /api/promotions?userId=cmd059ir10002e6d86l802ljc&userRole=HHRMD&userInstitutionId=cmd059ion0000e6d85kexfukl 200 in 116ms
+ GET /dashboard/promotion 200 in 252ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 165ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 166ms
+ GET /api/promotions?userId=cmd059ir10002e6d86l802ljc&userRole=HHRMD&userInstitutionId=cmd059ion0000e6d85kexfukl 200 in 194ms
+ GET /api/promotions?userId=cmd059ir10002e6d86l802ljc&userRole=HHRMD&userInstitutionId=cmd059ion0000e6d85kexfukl 200 in 88ms
+ PATCH /api/promotions 200 in 83ms
+ GET /api/promotions?userId=cmd059ir10002e6d86l802ljc&userRole=HHRMD&userInstitutionId=cmd059ion0000e6d85kexfukl 200 in 98ms
+ PATCH /api/promotions 200 in 149ms
+ GET /api/promotions?userId=cmd059ir10002e6d86l802ljc&userRole=HHRMD&userInstitutionId=cmd059ion0000e6d85kexfukl 200 in 119ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 189ms
+ GET /dashboard/promotion 200 in 187ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 148ms
+ GET /api/promotions?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 154ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 100ms
+ GET /favicon.ico 200 in 351ms
+ GET /api/promotions?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 135ms
+ GET /favicon.ico 200 in 2857ms
+ ○ Compiling /dashboard/confirmation ...
+ ✓ Compiled /dashboard/confirmation in 1213ms (1308 modules)
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 963ms
+ GET /dashboard/confirmation 200 in 1532ms
+ ✓ Compiled /api/confirmations in 353ms (1310 modules)
+ GET /api/confirmations?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO 200 in 560ms
+ GET /dashboard/profile 200 in 216ms
+ ✓ Compiled /api/employees in 206ms (756 modules)
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 328ms
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 69ms
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q=190475-002-002 200 in 157ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 220ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 209ms
+ GET /dashboard/confirmation 200 in 277ms
+ GET /api/confirmations?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO 200 in 120ms
+ GET /dashboard/profile 200 in 210ms
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 125ms
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 153ms
+ ○ Compiling /dashboard/cadre-change ...
+ ✓ Compiled /dashboard/cadre-change in 1191ms (1317 modules)
+ GET /dashboard/cadre-change 200 in 1544ms
+ ✓ Compiled /api/cadre-change in 399ms (1319 modules)
+ GET /api/cadre-change?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 569ms
+ GET /api/cadre-change?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 60ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 154ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 116ms
+ GET /dashboard/confirmation 200 in 268ms
+ GET /api/confirmations?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO 200 in 89ms
+ GET /dashboard/profile 200 in 203ms
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 137ms
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 81ms
+ GET /dashboard/profile 200 in 241ms
+ GET /dashboard/profile 200 in 210ms
+ GET /dashboard/confirmation 200 in 154ms
+ GET /api/confirmations?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO 200 in 117ms
+ GET /dashboard/confirmation 200 in 231ms
+ ✓ Compiled /favicon.ico in 355ms (762 modules)
+ GET /api/confirmations?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO 200 in 774ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 806ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 94ms
+ GET /favicon.ico 200 in 1023ms
+ GET /favicon.ico 200 in 272ms
+ GET /dashboard/profile 200 in 258ms
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 120ms
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 76ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 107ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 219ms
+ GET /dashboard/cadre-change 200 in 227ms
+ GET /api/cadre-change?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 156ms
+ GET /api/cadre-change?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 70ms
+ GET /dashboard/promotion 200 in 151ms
+ ✓ Compiled /api/promotions in 530ms (758 modules)
+ GET /api/promotions?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 728ms
+ GET /api/promotions?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 66ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 84ms
+ ✓ Compiled /api/employees/search in 446ms (760 modules)
+ GET /api/employees/search?zanId=190585-003-003 200 in 636ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 140ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 97ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 69ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 109ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 95ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 130ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 82ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 108ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 104ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 81ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 138ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 103ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 131ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 146ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 111ms
+ GET /dashboard/cadre-change 200 in 268ms
+ GET /api/cadre-change?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 106ms
+ GET /api/cadre-change?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 94ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 64ms
+ GET /dashboard/cadre-change 200 in 250ms
+ ✓ Compiled /favicon.ico in 387ms (758 modules)
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 727ms
+ GET /api/cadre-change?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 729ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 103ms
+ GET /favicon.ico 200 in 953ms
+ GET /api/cadre-change?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 163ms
+ GET /favicon.ico 200 in 320ms
+ GET /dashboard/profile 200 in 186ms
+ ✓ Compiled /api/employees in 394ms (760 modules)
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 542ms
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 67ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 79ms
+ GET /dashboard/cadre-change 200 in 164ms
+ GET /api/cadre-change?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 114ms
+ GET /api/cadre-change?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 114ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 68ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 136ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 121ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 128ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 77ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 62ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 149ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 118ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 92ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 143ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 101ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 144ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 69ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 121ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 77ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 138ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 113ms
+ GET /dashboard/profile 200 in 224ms
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 139ms
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 83ms
+ GET /dashboard/profile 200 in 213ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 138ms
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 129ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 74ms
+ GET /favicon.ico 200 in 332ms
+ GET /favicon.ico 200 in 292ms
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 75ms
+ GET /dashboard/profile 200 in 262ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 156ms
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 158ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 102ms
+ GET /favicon.ico 200 in 356ms
+ GET /dashboard/profile 200 in 232ms
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 65ms
+ GET /favicon.ico 200 in 233ms
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 121ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 152ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 82ms
+ GET /favicon.ico 200 in 306ms
+ GET /favicon.ico 200 in 292ms
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 77ms
+ GET /dashboard/profile 200 in 113ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 3125ms
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 3112ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 84ms
+ GET /favicon.ico 200 in 3278ms
+ GET /favicon.ico 200 in 295ms
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 107ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 70ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 174ms
+ GET /dashboard/cadre-change 200 in 196ms
+ GET /api/cadre-change?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 85ms
+ GET /api/cadre-change?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 80ms
+ GET /dashboard/profile 200 in 208ms
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 125ms
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 120ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 137ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 116ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 75ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 121ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 84ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 92ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 215ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 75ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 124ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 74ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 79ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 115ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 76ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 143ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 120ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 133ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 73ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 101ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 98ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 120ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 120ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 72ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 140ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 184ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 124ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 153ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 139ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 107ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 81ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 121ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 101ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 78ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 72ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 131ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 124ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 74ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 70ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 98ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 142ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 71ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 125ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 93ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 157ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 87ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 80ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 94ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 125ms
+ GET /dashboard/profile 200 in 193ms
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 133ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 159ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 73ms
+ GET /favicon.ico 200 in 320ms
+ GET /favicon.ico 200 in 282ms
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 77ms
+ GET /dashboard/profile 200 in 188ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 145ms
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 176ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 105ms
+ GET /favicon.ico 200 in 367ms
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 65ms
+ GET /favicon.ico 200 in 286ms
+ GET /dashboard/profile 200 in 194ms
+ GET /api/employees?userRole=HHRMD&userInstitutionId=cmd059ion0000e6d85kexfukl&q= 200 in 131ms
+ GET /api/employees?userRole=HHRMD&userInstitutionId=cmd059ion0000e6d85kexfukl&q= 200 in 147ms
+ GET /dashboard/profile 200 in 179ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 64ms
+ GET /dashboard/profile 200 in 174ms
+ GET /favicon.ico 200 in 333ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 175ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 164ms
+ GET /api/employees?userRole=HHRMD&userInstitutionId=cmd059ion0000e6d85kexfukl&q= 200 in 178ms
+ GET /api/employees?userRole=HHRMD&userInstitutionId=cmd059ion0000e6d85kexfukl&q= 200 in 85ms
+ GET /dashboard/confirmation 200 in 236ms
+ ✓ Compiled /api/confirmations in 539ms (760 modules)
+ GET /api/confirmations?userId=cmd059ir10002e6d86l802ljc&userRole=HHRMD 200 in 712ms
+ GET /dashboard/profile 200 in 200ms
+ GET /api/employees?userRole=HHRMD&userInstitutionId=cmd059ion0000e6d85kexfukl&q= 200 in 115ms
+ GET /api/employees?userRole=HHRMD&userInstitutionId=cmd059ion0000e6d85kexfukl&q= 200 in 119ms
+ GET /dashboard/profile 200 in 146ms
+ GET /favicon.ico 200 in 325ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 208ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 188ms
+ GET /api/employees?userRole=HHRMD&userInstitutionId=cmd059ion0000e6d85kexfukl&q= 200 in 202ms
+ GET /api/employees?userRole=HHRMD&userInstitutionId=cmd059ion0000e6d85kexfukl&q= 200 in 98ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 125ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 121ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 139ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 119ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 91ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 99ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 69ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 77ms
+ GET /dashboard/profile 200 in 213ms
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 121ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 153ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 79ms
+ GET /favicon.ico 200 in 308ms
+ GET /favicon.ico 200 in 293ms
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 86ms
+ GET /dashboard/profile 200 in 115ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 129ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 112ms
+ GET /api/employees?userRole=HHRMD&userInstitutionId=cmd059ion0000e6d85kexfukl&q= 200 in 134ms
+ GET /api/employees?userRole=HHRMD&userInstitutionId=cmd059ion0000e6d85kexfukl&q= 200 in 105ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 119ms
+ GET /dashboard/cadre-change 200 in 222ms
+ ✓ Compiled /api/cadre-change in 467ms (758 modules)
+ GET /api/cadre-change?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 672ms
+ GET /api/cadre-change?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 92ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 2442ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 123ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 117ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 138ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 122ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 91ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 211ms
+ ✓ Compiled /api/employees/search in 391ms (755 modules)
+ GET /api/employees/search?zanId=1906900040 200 in 545ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 198ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 132ms
+ GET /api/employees/search?zanId=1906900040 200 in 120ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 74ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 118ms
+ GET /api/employees/search?zanId=1906900040 200 in 86ms
+ GET /api/employees/search?zanId=2214582327 404 in 86ms
+ GET /api/employees/search?zanId=1905800010 200 in 75ms
+ GET /api/employees/search?zanId=9999999999 404 in 96ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 73ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 124ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 87ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 143ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 66ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 69ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 128ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 134ms
+ GET /dashboard/cadre-change 200 in 276ms
+ ✓ Compiled /api/cadre-change in 437ms (755 modules)
+ ✓ Compiled (758 modules)
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 911ms
+ GET /api/cadre-change?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 912ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 90ms
+ GET /api/cadre-change?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 125ms
+ GET /favicon.ico 200 in 1136ms
+ GET /favicon.ico 200 in 273ms
+ GET /dashboard/cadre-change 200 in 236ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 162ms
+ GET /api/cadre-change?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 169ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 99ms
+ GET /favicon.ico 200 in 357ms
+ GET /api/cadre-change?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 132ms
+ GET /favicon.ico 200 in 284ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 81ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 1173ms (1321 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 1346ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 127ms
+ GET /dashboard/cadre-change 200 in 240ms
+ ○ Compiling /dashboard/complaints ...
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 5031ms
+ GET /dashboard/complaints 200 in 7936ms
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/@genkit-ai/ai/lib/chat.js
+./node_modules/genkit/lib/common.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+[COMPLAINTS_GET] Error [PrismaClientValidationError]: 
+Invalid `prisma.complaint.findMany()` invocation:
+
+{
+  where: {
+    assignedOfficerRole: "HHRMD",
+    status: {
+      not: "Closed - Satisfied"
+    }
+  },
+  orderBy: {
+    createdAt: "desc"
+  },
+  include: {
+    complainant: {
+      select: {
+        name: true,
+        employeeId: true,
+        zanId: true,
+        ~~~~~
+        department: true,
+        cadre: true,
+        institution: {
+          select: {
+            name: true
+          }
+        },
+?       id?: true,
+?       username?: true,
+?       password?: true,
+?       role?: true,
+?       active?: true,
+?       institutionId?: true,
+?       createdAt?: true,
+?       updatedAt?: true,
+?       employee?: true,
+?       submittedConfirmations?: true,
+?       reviewedConfirmations?: true,
+?       submittedPromotions?: true,
+?       reviewedPromotions?: true,
+?       submittedLWOPs?: true,
+?       reviewedLWOPs?: true,
+?       submittedCadreChanges?: true,
+?       reviewedCadreChanges?: true,
+?       submittedRetirements?: true,
+?       reviewedRetirements?: true,
+?       submittedResignations?: true,
+?       reviewedResignations?: true,
+?       submittedServiceExtensions?: true,
+?       reviewedServiceExtensions?: true,
+?       submittedSeparations?: true,
+?       reviewedSeparations?: true,
+?       complaints?: true,
+?       reviewedComplaints?: true,
+?       notifications?: true,
+?       _count?: true
+      }
+    },
+    reviewedBy: {
+      select: {
+        name: true,
+        role: true
+      }
+    }
+  }
+}
+
+Unknown field `zanId` for select statement on model `User`. Available options are marked with ?.
+    at async GET (src/app/api/complaints/route.ts:92:19)
+  90 |       });
+  91 |     } else if (userRole === ROLES.DO || userRole === ROLES.HHRMD) {
+> 92 |       complaints = await db.complaint.findMany({
+     |                   ^
+  93 |         where: { assignedOfficerRole: userRole, status: { not: "Closed - Satisfied" } },
+  94 |         orderBy: { createdAt: 'desc' },
+  95 |         include: includeOptions, {
+  clientVersion: '6.11.1'
+}
+ GET /api/complaints?userId=cmd059ir10002e6d86l802ljc&userRole=HHRMD 500 in 3803ms
+[COMPLAINTS_GET] Error [PrismaClientValidationError]: 
+Invalid `prisma.complaint.findMany()` invocation:
+
+{
+  where: {
+    assignedOfficerRole: "HHRMD",
+    status: {
+      not: "Closed - Satisfied"
+    }
+  },
+  orderBy: {
+    createdAt: "desc"
+  },
+  include: {
+    complainant: {
+      select: {
+        name: true,
+        employeeId: true,
+        zanId: true,
+        ~~~~~
+        department: true,
+        cadre: true,
+        institution: {
+          select: {
+            name: true
+          }
+        },
+?       id?: true,
+?       username?: true,
+?       password?: true,
+?       role?: true,
+?       active?: true,
+?       institutionId?: true,
+?       createdAt?: true,
+?       updatedAt?: true,
+?       employee?: true,
+?       submittedConfirmations?: true,
+?       reviewedConfirmations?: true,
+?       submittedPromotions?: true,
+?       reviewedPromotions?: true,
+?       submittedLWOPs?: true,
+?       reviewedLWOPs?: true,
+?       submittedCadreChanges?: true,
+?       reviewedCadreChanges?: true,
+?       submittedRetirements?: true,
+?       reviewedRetirements?: true,
+?       submittedResignations?: true,
+?       reviewedResignations?: true,
+?       submittedServiceExtensions?: true,
+?       reviewedServiceExtensions?: true,
+?       submittedSeparations?: true,
+?       reviewedSeparations?: true,
+?       complaints?: true,
+?       reviewedComplaints?: true,
+?       notifications?: true,
+?       _count?: true
+      }
+    },
+    reviewedBy: {
+      select: {
+        name: true,
+        role: true
+      }
+    }
+  }
+}
+
+Unknown field `zanId` for select statement on model `User`. Available options are marked with ?.
+    at async GET (src/app/api/complaints/route.ts:92:19)
+  90 |       });
+  91 |     } else if (userRole === ROLES.DO || userRole === ROLES.HHRMD) {
+> 92 |       complaints = await db.complaint.findMany({
+     |                   ^
+  93 |         where: { assignedOfficerRole: userRole, status: { not: "Closed - Satisfied" } },
+  94 |         orderBy: { createdAt: 'desc' },
+  95 |         include: includeOptions, {
+  clientVersion: '6.11.1'
+}
+ GET /api/complaints?userId=cmd059ir10002e6d86l802ljc&userRole=HHRMD 500 in 3839ms
+ GET /dashboard/promotion 200 in 195ms
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/@genkit-ai/ai/lib/chat.js
+./node_modules/genkit/lib/common.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/@genkit-ai/ai/lib/chat.js
+./node_modules/genkit/lib/common.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ GET /api/promotions?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 1387ms
+ GET /api/promotions?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 92ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 109ms
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/@genkit-ai/ai/lib/chat.js
+./node_modules/genkit/lib/common.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/@genkit-ai/ai/lib/chat.js
+./node_modules/genkit/lib/common.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ GET /api/employees/search?zanId=1905850030 200 in 985ms
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/@genkit-ai/ai/lib/chat.js
+./node_modules/genkit/lib/common.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ GET /dashboard/retirement 200 in 2157ms
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/@genkit-ai/ai/lib/chat.js
+./node_modules/genkit/lib/common.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ GET /api/retirement?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 925ms
+ GET /api/retirement?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 101ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 232ms
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/@genkit-ai/ai/lib/chat.js
+./node_modules/genkit/lib/common.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/@genkit-ai/core/lib/action.js
+./node_modules/@genkit-ai/core/lib/index.js
+./node_modules/genkit/lib/common.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ GET /dashboard/resignation 200 in 1273ms
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/@genkit-ai/core/lib/action.js
+./node_modules/@genkit-ai/core/lib/index.js
+./node_modules/genkit/lib/common.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ GET /api/resignation?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 867ms
+ GET /api/resignation?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 61ms
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ GET /dashboard/lwop 200 in 1440ms
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 192ms
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ GET /api/lwop?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 1012ms
+ GET /api/lwop?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 92ms
+ GET /dashboard/confirmation 200 in 239ms
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ GET /api/confirmations?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO 200 in 916ms
+ GET /api/employees/search?zanId=1905850030 200 in 174ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 126ms
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ GET /dashboard/profile 200 in 1014ms
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 649ms
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 90ms
+ GET /api/confirmations?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO 200 in 159ms
+ GET /api/employees/search?zanId=1905850030 200 in 168ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 81ms
+ GET /dashboard/lwop 200 in 239ms
+ GET /api/lwop?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 99ms
+ GET /api/lwop?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 115ms
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/@genkit-ai/ai/lib/chat.js
+./node_modules/genkit/lib/common.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ GET /dashboard/promotion 200 in 865ms
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/@genkit-ai/ai/lib/chat.js
+./node_modules/genkit/lib/common.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ GET /api/promotions?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 635ms
+ GET /api/promotions?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 67ms
+ GET /api/employees/search?zanId=1905850030 200 in 120ms
+ GET /api/employees/search?zanId=1905850030 200 in 102ms
+ GET /dashboard/lwop 200 in 239ms
+ GET /api/lwop?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 117ms
+ GET /api/lwop?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 102ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 118ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 80ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 70ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 116ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 87ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 112ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 136ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 76ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 127ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 124ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 83ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 134ms
+ GET /api/employees/search?zanId=1905850030 200 in 117ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 72ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 147ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 122ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 102ms
+ GET /dashboard/promotion 200 in 260ms
+ GET /api/promotions?userId=cmd059ir10002e6d86l802ljc&userRole=HHRMD&userInstitutionId=cmd059ion0000e6d85kexfukl 200 in 131ms
+ GET /api/promotions?userId=cmd059ir10002e6d86l802ljc&userRole=HHRMD&userInstitutionId=cmd059ion0000e6d85kexfukl 200 in 141ms
+ GET /dashboard/lwop 200 in 284ms
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/@genkit-ai/core/lib/action.js
+./node_modules/@genkit-ai/core/lib/index.js
+./node_modules/genkit/lib/common.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/@genkit-ai/core/lib/action.js
+./node_modules/@genkit-ai/core/lib/index.js
+./node_modules/genkit/lib/common.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 2893ms
+ GET /api/lwop?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 2898ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 85ms
+ GET /favicon.ico 200 in 3102ms
+ GET /api/lwop?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 126ms
+ GET /favicon.ico 200 in 299ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 71ms
+ GET /dashboard/confirmation 200 in 273ms
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ GET /api/confirmations?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO 200 in 803ms
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ GET /api/employees/search?zanId=1905850030 200 in 661ms
+ GET /dashboard/lwop 200 in 222ms
+ GET /api/lwop?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 137ms
+ GET /api/lwop?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 69ms
+ GET /dashboard/promotion 200 in 263ms
+ GET /api/promotions?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 138ms
+ GET /api/promotions?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 93ms
+ GET /api/employees/search?zanId=1905850030 200 in 121ms
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ GET /dashboard/cadre-change 200 in 1089ms
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ GET /api/cadre-change?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 845ms
+ GET /api/cadre-change?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 80ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 122ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 87ms
+ GET /dashboard/confirmation 200 in 284ms
+ GET /api/confirmations?userId=cmd059ir10002e6d86l802ljc&userRole=HHRMD 200 in 110ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 69ms
+ GET /dashboard/cadre-change 200 in 260ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 124ms
+ GET /api/cadre-change?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 133ms
+ GET /favicon.ico 200 in 312ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 121ms
+ GET /api/cadre-change?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 132ms
+ GET /favicon.ico 200 in 317ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 69ms
+ GET /dashboard/cadre-change 200 in 187ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 149ms
+ GET /api/cadre-change?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 157ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 113ms
+ GET /api/cadre-change?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 127ms
+ GET /favicon.ico 200 in 348ms
+ GET /favicon.ico 200 in 283ms
+ GET /dashboard/cadre-change 200 in 125ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 125ms
+ GET /api/cadre-change?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 168ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 139ms
+ GET /api/cadre-change?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 114ms
+ GET /dashboard/profile 200 in 232ms
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/@genkit-ai/ai/lib/chat.js
+./node_modules/genkit/lib/common.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 1081ms
+ GET /api/employees?userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x&q= 200 in 95ms
+ GET /dashboard/confirmation 200 in 219ms
+ GET /api/confirmations?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO 200 in 87ms
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/@genkit-ai/ai/lib/chat.js
+./node_modules/genkit/lib/common.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ GET /api/employees/search?zanId=1905850030 200 in 707ms
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ GET /dashboard/lwop 200 in 763ms
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ GET /api/lwop?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 644ms
+ GET /api/lwop?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 73ms
+ GET /dashboard/promotion 200 in 221ms
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ GET /api/promotions?userId=cmd059ir10002e6d86l802ljc&userRole=HHRMD&userInstitutionId=cmd059ion0000e6d85kexfukl 200 in 2222ms
+ GET /api/promotions?userId=cmd059ir10002e6d86l802ljc&userRole=HHRMD&userInstitutionId=cmd059ion0000e6d85kexfukl 200 in 2266ms
+ GET /dashboard/promotion 200 in 232ms
+ GET /api/promotions?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 111ms
+ GET /api/promotions?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 86ms
+ GET /api/employees/search?zanId=1905850030 200 in 140ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 111ms
+ GET /dashboard/cadre-change 200 in 159ms
+ GET /api/cadre-change?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 82ms
+ GET /api/cadre-change?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 64ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 125ms
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ GET /dashboard/retirement 200 in 1295ms
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ GET /api/retirement?userId=cmd059ir10002e6d86l802ljc&userRole=HHRMD&userInstitutionId=cmd059ion0000e6d85kexfukl 200 in 756ms
+ GET /api/retirement?userId=cmd059ir10002e6d86l802ljc&userRole=HHRMD&userInstitutionId=cmd059ion0000e6d85kexfukl 200 in 165ms
+ GET /dashboard/retirement 200 in 224ms
+ GET /api/retirement?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 103ms
+ GET /api/retirement?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 78ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 91ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 174ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 79ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 99ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 70ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 119ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 70ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 103ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 84ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 68ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 165ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 115ms
+ GET /dashboard/retirement 200 in 279ms
+ ⚠ ./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+Module not found: Can't resolve '@opentelemetry/exporter-jaeger' in '/mnt/c/hamisho/studio/node_modules/@opentelemetry/sdk-node/build/src'
+
+Import trace for requested module:
+./node_modules/@opentelemetry/sdk-node/build/src/TracerProviderWithEnvExporter.js
+./node_modules/@opentelemetry/sdk-node/build/src/sdk.js
+./node_modules/@opentelemetry/sdk-node/build/src/index.js
+./node_modules/@genkit-ai/core/lib/tracing.js
+./node_modules/genkit/lib/tracing.js
+./node_modules/@genkit-ai/googleai/lib/gemini.js
+./node_modules/@genkit-ai/googleai/lib/index.mjs
+./src/ai/genkit.ts
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+
+./node_modules/handlebars/lib/index.js
+require.extensions is not supported by webpack. Use a loader instead.
+
+Import trace for requested module:
+./node_modules/handlebars/lib/index.js
+./node_modules/dotprompt/dist/index.js
+./node_modules/@genkit-ai/core/lib/registry.js
+./node_modules/genkit/lib/registry.js
+./node_modules/genkit/lib/genkit.js
+./node_modules/genkit/lib/index.mjs
+./src/ai/flows/complaint-rewriter.ts
+ ✓ Compiled /api/retirement in 740ms (765 modules)
+ ✓ Compiled (768 modules)
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 1309ms
+ GET /api/retirement?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 1329ms
+ GET /favicon.ico 200 in 1493ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 256ms
+ GET /api/retirement?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 270ms
+ GET /favicon.ico 200 in 428ms
+ GET /dashboard/retirement 200 in 285ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 125ms
+ GET /api/retirement?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 134ms
+ GET /favicon.ico 200 in 327ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 140ms
+ GET /api/retirement?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 207ms
+ GET /favicon.ico 200 in 307ms
+ GET /dashboard/promotion 200 in 214ms
+ ✓ Compiled /api/promotions in 305ms (770 modules)
+ GET /api/promotions?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 479ms
+ GET /api/promotions?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 99ms
+ ✓ Compiled /api/employees/search in 402ms (772 modules)
+ GET /api/employees/search?zanId=1905850030 200 in 654ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 125ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 82ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 121ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 125ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 132ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 143ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 217ms
+ GET /dashboard/promotion 200 in 385ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 164ms
+ GET /api/promotions?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 186ms
+ GET /favicon.ico 200 in 362ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 155ms
+ GET /api/promotions?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 171ms
+ GET /favicon.ico 200 in 330ms
+ GET /api/employees/search?zanId=1905850030 200 in 148ms
+ GET /dashboard/cadre-change 200 in 221ms
+ ○ Compiling /api/cadre-change ...
+ ✓ Compiled /api/cadre-change in 1233ms (772 modules)
+ GET /api/cadre-change?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 1422ms
+ GET /api/cadre-change?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 70ms
+ GET /dashboard/retirement 200 in 211ms
+ ✓ Compiled /api/retirement in 303ms (774 modules)
+ GET /api/retirement?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 485ms
+ GET /api/retirement?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 77ms
+ ○ Compiling /dashboard/resignation ...
+ ✓ Compiled /dashboard/resignation in 818ms (781 modules)
+ GET /dashboard/resignation 200 in 1088ms
+ ✓ Compiled /api/resignation in 302ms (783 modules)
+ GET /api/resignation?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 490ms
+ GET /api/resignation?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 169ms
+ ○ Compiling /dashboard/termination ...
+ ✓ Compiled /dashboard/termination in 1133ms (1390 modules)
+ GET /dashboard/termination 200 in 1448ms
+ ○ Compiling /api/termination ...
+ ✓ Compiled /api/termination in 596ms (1392 modules)
+ GET /api/termination?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 826ms
+ GET /api/termination?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 108ms
+ GET /api/employees/search?zanId=1905850030 200 in 123ms
+ ○ Compiling /dashboard/service-extension ...
+ ✓ Compiled /dashboard/service-extension in 1304ms (1401 modules)
+ GET /dashboard/service-extension 200 in 1655ms
+ ○ Compiling /api/service-extension ...
+ ✓ Compiled /api/service-extension in 600ms (1403 modules)
+ GET /api/service-extension?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 793ms
+ GET /api/service-extension?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 164ms
+ GET /api/employees/search?zanId=1905850030 200 in 144ms
+ GET /dashboard/resignation 200 in 165ms
+ GET /api/resignation?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 91ms
+ GET /api/resignation?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 67ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 111ms
+ GET /dashboard/retirement 200 in 157ms
+ GET /api/retirement?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 120ms
+ GET /api/retirement?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 64ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 119ms
+ GET /dashboard/resignation 200 in 151ms
+ GET /api/resignation?userId=cmd059ir10002e6d86l802ljc&userRole=HHRMD&userInstitutionId=cmd059ion0000e6d85kexfukl 200 in 131ms
+ GET /api/resignation?userId=cmd059ir10002e6d86l802ljc&userRole=HHRMD&userInstitutionId=cmd059ion0000e6d85kexfukl 200 in 133ms
+ GET /dashboard/service-extension 200 in 175ms
+ GET /api/service-extension?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 71ms
+ GET /api/service-extension?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 120ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 64ms
+ GET /api/employees/search?zanId=1905850030 200 in 95ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 88ms
+ GET /dashboard/retirement 200 in 222ms
+ GET /api/retirement?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 81ms
+ GET /api/retirement?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 77ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 186ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 86ms
+ GET /dashboard/lwop 200 in 218ms
+ ○ Compiling /api/lwop ...
+ ✓ Compiled /api/lwop in 755ms (771 modules)
+ GET /api/lwop?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 984ms
+ GET /api/lwop?userId=cmd06nnbn000le67wtg41s3su&userRole=HRO&userInstitutionId=cmd06nn7n0001e67w2h5rf86x 200 in 98ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 78ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 141ms
+ ○ Compiling /api/employees/search ...
+ ✓ Compiled /api/employees/search in 757ms (758 modules)
+ GET /api/employees/search?zanId=1905850030 200 in 1013ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 131ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 188ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 88ms
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 200 in 77ms
+ GET /api/notifications?userId=cmd059ir10002e6d86l802ljc 200 in 83ms
+ GET /api/employees/search?zanId=1906900040 200 in 158ms
+ ○ Compiling /api/employees ...
+ ✓ Compiled /api/employees in 1108ms (761 modules)
+ GET /api/employees 200 in 1314ms
+ ⨯ Error: Cannot find module './4447.js'
+Require stack:
+- /mnt/c/hamisho/studio/.next/server/webpack-runtime.js
+- /mnt/c/hamisho/studio/.next/server/app/api/employees/route.js
+- /mnt/c/hamisho/studio/node_modules/next/dist/server/require.js
+- /mnt/c/hamisho/studio/node_modules/next/dist/server/load-components.js
+- /mnt/c/hamisho/studio/node_modules/next/dist/build/utils.js
+- /mnt/c/hamisho/studio/node_modules/next/dist/build/swc/options.js
+- /mnt/c/hamisho/studio/node_modules/next/dist/build/swc/index.js
+- /mnt/c/hamisho/studio/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /mnt/c/hamisho/studio/node_modules/next/dist/server/config.js
+- /mnt/c/hamisho/studio/node_modules/next/dist/server/next.js
+- /mnt/c/hamisho/studio/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:208:28)
+    at <unknown> (.next/server/webpack-runtime.js:116:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:115:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:167:22)
+    at <unknown> (.next/server/app/api/notifications/route.js:1:2457)
+    at Object.<anonymous> (.next/server/app/api/notifications/route.js:1:2508) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/api/notifications'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 1942ms (1689 modules)
+ ⨯ Error: ENOENT: no such file or directory, open '/mnt/c/hamisho/studio/.next/server/vendor-chunks/@radix-ui.js'
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:208:28)
+    at <unknown> (.next/server/webpack-runtime.js:116:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:115:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:167:22)
+    at <unknown> (.next/server/app/dashboard/lwop/page.js:676:47)
+    at Object.<anonymous> (.next/server/app/dashboard/lwop/page.js:679:3) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/mnt/c/hamisho/studio/.next/server/vendor-chunks/@radix-ui.js',
+  page: '/dashboard/lwop'
+}
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at ShadowPortal (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/components/shadow-portal.tsx:5:32)
+    at DevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/dev-overlay.tsx:14:3)
+    at ReactDevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/server/dev/next-dev-server.ts:82:10)
+    at div
+    at Body (webpack://next/dist/src/server/render.tsx:1263:19)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at ShadowPortal (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/components/shadow-portal.tsx:5:32)
+    at DevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/dev-overlay.tsx:14:3)
+    at ReactDevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/server/dev/next-dev-server.ts:82:10)
+    at div
+    at Body (webpack://next/dist/src/server/render.tsx:1263:19)
+ GET /api/notifications?userId=cmd06nnbn000le67wtg41s3su 500 in 12587ms
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at ShadowPortal (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/components/shadow-portal.tsx:5:32)
+    at DevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/dev-overlay.tsx:14:3)
+    at ReactDevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/server/dev/next-dev-server.ts:82:10)
+    at div
+    at Body (webpack://next/dist/src/server/render.tsx:1263:19)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at ShadowPortal (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/components/shadow-portal.tsx:5:32)
+    at DevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/dev-overlay.tsx:14:3)
+    at ReactDevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/server/dev/next-dev-server.ts:82:10)
+    at div
+    at Body (webpack://next/dist/src/server/render.tsx:1263:19)
+ GET /dashboard/lwop 500 in 11069ms
+ ⨯ Error: ENOENT: no such file or directory, open '/mnt/c/hamisho/studio/.next/server/vendor-chunks/@radix-ui.js'
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:208:28)
+    at <unknown> (.next/server/webpack-runtime.js:116:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:115:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:167:22)
+    at <unknown> (.next/server/app/dashboard/lwop/page.js:676:47)
+    at Object.<anonymous> (.next/server/app/dashboard/lwop/page.js:679:3) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/mnt/c/hamisho/studio/.next/server/vendor-chunks/@radix-ui.js',
+  page: '/dashboard/lwop'
+}
+ ⨯ Error: ENOENT: no such file or directory, open '/mnt/c/hamisho/studio/.next/server/vendor-chunks/@radix-ui.js'
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:208:28)
+    at <unknown> (.next/server/webpack-runtime.js:116:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:115:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:167:22)
+    at <unknown> (.next/server/app/dashboard/resignation/page.js:676:47)
+    at Object.<anonymous> (.next/server/app/dashboard/resignation/page.js:679:3) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/mnt/c/hamisho/studio/.next/server/vendor-chunks/@radix-ui.js',
+  page: '/dashboard/resignation'
+}
+ ⨯ Error: ENOENT: no such file or directory, open '/mnt/c/hamisho/studio/.next/server/vendor-chunks/@radix-ui.js'
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:208:28)
+    at <unknown> (.next/server/webpack-runtime.js:116:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:115:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:167:22)
+    at <unknown> (.next/server/app/dashboard/lwop/page.js:676:47)
+    at Object.<anonymous> (.next/server/app/dashboard/lwop/page.js:679:3) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/mnt/c/hamisho/studio/.next/server/vendor-chunks/@radix-ui.js',
+  page: '/dashboard/lwop'
+}
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at ShadowPortal (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/components/shadow-portal.tsx:5:32)
+    at DevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/dev-overlay.tsx:14:3)
+    at ReactDevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/server/dev/next-dev-server.ts:82:10)
+    at div
+    at Body (webpack://next/dist/src/server/render.tsx:1263:19)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at ShadowPortal (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/components/shadow-portal.tsx:5:32)
+    at DevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/dev-overlay.tsx:14:3)
+    at ReactDevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/server/dev/next-dev-server.ts:82:10)
+    at div
+    at Body (webpack://next/dist/src/server/render.tsx:1263:19)
+ GET /dashboard/lwop 500 in 472ms
+ GET /dashboard/lwop 500 in 349ms
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at ShadowPortal (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/components/shadow-portal.tsx:5:32)
+    at DevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/dev-overlay.tsx:14:3)
+    at ReactDevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/server/dev/next-dev-server.ts:82:10)
+    at div
+    at Body (webpack://next/dist/src/server/render.tsx:1263:19)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at ShadowPortal (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/components/shadow-portal.tsx:5:32)
+    at DevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/dev-overlay.tsx:14:3)
+    at ReactDevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/server/dev/next-dev-server.ts:82:10)
+    at div
+    at Body (webpack://next/dist/src/server/render.tsx:1263:19)
+ GET /dashboard/resignation 500 in 551ms
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at ShadowPortal (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/components/shadow-portal.tsx:5:32)
+    at DevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/dev-overlay.tsx:14:3)
+    at ReactDevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/server/dev/next-dev-server.ts:82:10)
+    at div
+    at Body (webpack://next/dist/src/server/render.tsx:1263:19)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at ShadowPortal (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/components/shadow-portal.tsx:5:32)
+    at DevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/dev-overlay.tsx:14:3)
+    at ReactDevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/server/dev/next-dev-server.ts:82:10)
+    at div
+    at Body (webpack://next/dist/src/server/render.tsx:1263:19)
+ ⨯ Error: ENOENT: no such file or directory, open '/mnt/c/hamisho/studio/.next/server/vendor-chunks/@radix-ui.js'
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:208:28)
+    at <unknown> (.next/server/webpack-runtime.js:116:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:115:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:167:22)
+    at <unknown> (.next/server/app/dashboard/resignation/page.js:676:47)
+    at Object.<anonymous> (.next/server/app/dashboard/resignation/page.js:679:3) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/mnt/c/hamisho/studio/.next/server/vendor-chunks/@radix-ui.js',
+  page: '/dashboard/resignation'
+}
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at ShadowPortal (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/components/shadow-portal.tsx:5:32)
+    at DevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/dev-overlay.tsx:14:3)
+    at ReactDevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/server/dev/next-dev-server.ts:82:10)
+    at div
+    at Body (webpack://next/dist/src/server/render.tsx:1263:19)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at ShadowPortal (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/components/shadow-portal.tsx:5:32)
+    at DevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/dev-overlay.tsx:14:3)
+    at ReactDevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/server/dev/next-dev-server.ts:82:10)
+    at div
+    at Body (webpack://next/dist/src/server/render.tsx:1263:19)
+ GET /dashboard/resignation 500 in 437ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 1433ms (851 modules)
+ ⨯ Error: ENOENT: no such file or directory, open '/mnt/c/hamisho/studio/.next/server/vendor-chunks/@radix-ui.js'
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:208:28)
+    at <unknown> (.next/server/webpack-runtime.js:116:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:115:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:167:22)
+    at <unknown> (.next/server/app/dashboard/resignation/page.js:676:47)
+    at Object.<anonymous> (.next/server/app/dashboard/resignation/page.js:679:3) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/mnt/c/hamisho/studio/.next/server/vendor-chunks/@radix-ui.js',
+  page: '/dashboard/resignation'
+}
+ GET /favicon.ico 200 in 2128ms
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at ShadowPortal (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/components/shadow-portal.tsx:5:32)
+    at DevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/dev-overlay.tsx:14:3)
+    at ReactDevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/server/dev/next-dev-server.ts:82:10)
+    at div
+    at Body (webpack://next/dist/src/server/render.tsx:1263:19)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at ShadowPortal (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/components/shadow-portal.tsx:5:32)
+    at DevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/dev-overlay.tsx:14:3)
+    at ReactDevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/server/dev/next-dev-server.ts:82:10)
+    at div
+    at Body (webpack://next/dist/src/server/render.tsx:1263:19)
+ GET /dashboard/resignation 500 in 1993ms
+ ⨯ Error: ENOENT: no such file or directory, open '/mnt/c/hamisho/studio/.next/server/vendor-chunks/@radix-ui.js'
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:208:28)
+    at <unknown> (.next/server/webpack-runtime.js:116:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:115:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:167:22)
+    at <unknown> (.next/server/app/dashboard/lwop/page.js:676:47)
+    at Object.<anonymous> (.next/server/app/dashboard/lwop/page.js:679:3) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/mnt/c/hamisho/studio/.next/server/vendor-chunks/@radix-ui.js',
+  page: '/dashboard/lwop'
+}
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at ShadowPortal (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/components/shadow-portal.tsx:5:32)
+    at DevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/dev-overlay.tsx:14:3)
+    at ReactDevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/server/dev/next-dev-server.ts:82:10)
+    at div
+    at Body (webpack://next/dist/src/server/render.tsx:1263:19)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at ShadowPortal (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/components/shadow-portal.tsx:5:32)
+    at DevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/client/components/react-dev-overlay/ui/dev-overlay.tsx:14:3)
+    at ReactDevOverlay (/mnt/c/hamisho/studio/node_modules/next/src/server/dev/next-dev-server.ts:82:10)
+    at div
+    at Body (webpack://next/dist/src/server/render.tsx:1263:19)
+ GET /dashboard/lwop 500 in 466ms
+ GET /favicon.ico 200 in 310ms
+[?25h
