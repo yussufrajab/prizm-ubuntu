@@ -7,10 +7,11 @@ const promotionSchema = z.object({
   employeeId: z.string().min(1),
   submittedById: z.string().min(1),
   status: z.string(),
-  reviewStage: z.enum(['initial', 'hrmo_review', 'hhrmd_review', 'commission_review', 'completed']).default('initial'),
+  reviewStage: z.enum(['initial', 'commission_review', 'completed']).default('initial'),
   rejectionReason: z.string().nullable().optional(),
   reviewedById: z.string().nullable().optional(),
   commissionDecisionDate: z.string().nullable().optional(),
+  commissionDecisionReason: z.string().nullable().optional(),
   proposedCadre: z.string().min(1),
   promotionType: z.enum(['Experience', 'EducationAdvancement']),
   documents: z.array(z.string()),
@@ -143,11 +144,20 @@ export async function GET(req: Request) {
     if (userRole === ROLES.HRO) {
         whereClause.submittedById = userId;
     } else if (userRole === ROLES.HHRMD || userRole === ROLES.HRMO) {
-        whereClause.reviewStage = { in: ['initial', 'commission_review'] };
-        whereClause.status = { notIn: ['Approved by Commission', 'Rejected by Commission'] };
+        // Both HHRMD and HRMO see same requests at same time
+        whereClause.OR = [
+            { 
+                reviewStage: 'initial',
+                status: 'Pending HRMO/HHRMD Review'
+            },
+            {
+                reviewStage: 'commission_review',
+                status: 'Request Received – Awaiting Commission Decision'
+            }
+        ];
     } else {
-        // Higher roles (CSCS, Admin) can see more
-        whereClause.status = { notIn: ["Closed - Satisfied"] }; // Example filter
+        // Higher roles (CSCS, Admin) can see all non-completed requests
+        whereClause.status = { notIn: ['Approved by Commission', 'Rejected by Commission'] };
     }
     
     requests = await db.promotionRequest.findMany({

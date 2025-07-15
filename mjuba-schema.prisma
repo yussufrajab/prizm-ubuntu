@@ -155,7 +155,6 @@ model PromotionRequest {
   studiedOutsideCountry Boolean?
   documents             String[]
   rejectionReason       String?
-  commissionDecisionReason String?
   
   employeeId    String
   employee      Employee @relation(fields: [employeeId], references: [id])

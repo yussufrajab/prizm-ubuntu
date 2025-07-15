@@ -30,6 +30,7 @@ interface PromotionRequest {
   rejectionReason?: string | null;
   reviewedById?: string | null;
   commissionDecisionDate?: string | null;
+  commissionDecisionReason?: string | null;
   createdAt: string;
 
   proposedCadre: string;
@@ -87,6 +88,7 @@ export default function PromotionPage() {
   const [rejectionReasonInput, setRejectionReasonInput] = useState('');
   const [currentRequestToAction, setCurrentRequestToAction] = useState<PromotionRequest | null>(null);
   const [isEditingExistingRequest, setIsEditingExistingRequest] = useState(false);
+  const [isCommissionRejection, setIsCommissionRejection] = useState(false);
 
   const [eligibilityError, setEligibilityError] = useState<string | null>(null);
 
@@ -227,7 +229,7 @@ export default function PromotionPage() {
       ...(isEditingExistingRequest && { id: selectedRequest?.id }),
       employeeId: employeeDetails.id,
       submittedById: user.id,
-      status: 'Pending HRMO Review', // Always set to pending HRMO review on submission/resubmission
+      status: 'Pending HRMO/HHRMD Review', // Both HRMO and HHRMD can review simultaneously
       reviewStage: 'initial',
       proposedCadre,
       promotionType: promotionRequestType === 'experience' ? 'Experience' : 'EducationAdvancement',
@@ -307,31 +309,69 @@ export default function PromotionPage() {
 
   const handleRejectionSubmit = async () => {
     if (!currentRequestToAction || !rejectionReasonInput.trim() || !user) return;
-    const payload = { 
+    
+    let payload;
+    if (isCommissionRejection) {
+      // Commission rejection - final, no corrections possible
+      payload = { 
+        status: 'Rejected by Commission',
+        reviewStage: 'completed',
+        commissionDecisionReason: rejectionReasonInput
+      };
+    } else {
+      // HRMO/HHRMD rejection - allows HRO correction
+      payload = { 
         status: `Rejected by ${role} - Awaiting HRO Correction`, 
         rejectionReason: rejectionReasonInput, 
         reviewStage: 'initial'
-    };
+      };
+    }
+    
     const success = await handleUpdateRequest(currentRequestToAction.id, payload);
     if (success) {
-      toast({ title: "Request Rejected", description: `Request for ${currentRequestToAction.employee.name} rejected.`, variant: 'destructive' });
+      const title = isCommissionRejection ? "Commission Decision: Rejected" : "Request Rejected";
+      const description = isCommissionRejection 
+        ? `Promotion request for ${currentRequestToAction.employee.name} has been rejected by the Commission.`
+        : `Request for ${currentRequestToAction.employee.name} rejected and returned for correction.`;
+      toast({ title, description, variant: 'destructive' });
       setIsRejectionModalOpen(false);
       setCurrentRequestToAction(null);
       setRejectionReasonInput('');
+      setIsCommissionRejection(false);
     }
   };
 
   const handleCommissionDecision = async (requestId: string, decision: 'approved' | 'rejected') => {
     const request = pendingRequests.find(req => req.id === requestId);
-    const finalStatus = decision === 'approved' ? "Approved by Commission" : "Rejected by Commission";
-    const payload = { status: finalStatus, reviewStage: 'completed' };
-    const success = await handleUpdateRequest(requestId, payload);
-     if (success) {
-        const title = `Commission Decision: ${decision === 'approved' ? 'Approved' : 'Rejected'}`;
-        const description = decision === 'approved'
-          ? `Promotion approved. Employee ${request?.employee.name} rank updated to "${request?.proposedCadre}".`
-          : `Request ${requestId} has been rejected.`;
+    if (!request) return;
+    
+    if (decision === 'rejected') {
+      // Show modal to enter commission decision reason
+      setCurrentRequestToAction(request);
+      setRejectionReasonInput('');
+      setIsRejectionModalOpen(true);
+      // Set a flag to indicate this is a commission rejection
+      setIsCommissionRejection(true);
+    } else {
+      // For approval, also ask for reason
+      const reason = prompt('Please provide the reason for approval:');
+      if (!reason || !reason.trim()) {
+        toast({ title: "Reason Required", description: "Commission must provide a reason for the decision.", variant: "destructive" });
+        return;
+      }
+      
+      const finalStatus = "Approved by Commission";
+      const payload = { 
+        status: finalStatus, 
+        reviewStage: 'completed',
+        commissionDecisionReason: reason
+      };
+      const success = await handleUpdateRequest(requestId, payload);
+      if (success) {
+        const title = `Commission Decision: Approved`;
+        const description = `Promotion approved. Employee ${request?.employee.name} rank updated to "${request?.proposedCadre}".`;
         toast({ title, description });
+      }
     }
   };
 
@@ -515,7 +555,11 @@ export default function PromotionPage() {
                             )}
                           </>
                         )}
-                        {(role === ROLES.HRO && (request.status === 'Rejected by HRMO - Awaiting HRO Correction' || request.status === 'Rejected by HHRMD - Awaiting HRO Correction')) && (
+                        {(role === ROLES.HRO && 
+                          (request.status === 'Rejected by HRMO - Awaiting HRO Correction' || 
+                           request.status === 'Rejected by HHRMD - Awaiting HRO Correction') && 
+                          request.status !== 'Approved by Commission' && 
+                          request.status !== 'Rejected by Commission') && (
                           <Button size="sm" onClick={() => handleResubmitClick(request)}>Resubmit</Button>
                         )}
                       </TableCell>
@@ -618,6 +662,12 @@ export default function PromotionPage() {
                             <p className="col-span-2 text-destructive">{selectedRequest.rejectionReason}</p>
                         </div>
                     )}
+                    {selectedRequest.commissionDecisionReason && (
+                        <div className="grid grid-cols-3 items-start gap-x-4 gap-y-2">
+                            <Label className="text-right font-semibold pt-1">Commission Decision Reason:</Label>
+                            <p className="col-span-2">{selectedRequest.commissionDecisionReason}</p>
+                        </div>
+                    )}
                 </div>
                 <div className="pt-3 mt-3 border-t">
                     <Label className="font-semibold">Attached Documents</Label>
@@ -650,25 +700,40 @@ export default function PromotionPage() {
       )}
 
       {currentRequestToAction && (
-        <Dialog open={isRejectionModalOpen} onOpenChange={setIsRejectionModalOpen}>
+        <Dialog open={isRejectionModalOpen} onOpenChange={(open) => {
+            setIsRejectionModalOpen(open);
+            if (!open) {
+              setCurrentRequestToAction(null);
+              setIsCommissionRejection(false);
+            }
+          }}>
             <DialogContent className="sm:max-w-md">
                 <DialogHeader>
-                    <DialogTitle>Reject Promotion Request: {currentRequestToAction.id}</DialogTitle>
+                    <DialogTitle>
+                      {isCommissionRejection ? 'Commission Decision: Rejection' : `Reject Promotion Request: ${currentRequestToAction.id}`}
+                    </DialogTitle>
                     <DialogDescription>
-                        Please provide the reason for rejecting the promotion request for <strong>{currentRequestToAction.employee.name}</strong> ({currentRequestToAction.promotionType}). This reason will be visible to the HRO.
+                        Please provide the reason for {isCommissionRejection ? 'the Commission\'s rejection of' : 'rejecting'} the promotion request for <strong>{currentRequestToAction.employee.name}</strong> ({currentRequestToAction.promotionType}). 
+                        {isCommissionRejection ? ' This decision is final and no corrections will be allowed.' : ' This reason will be visible to the HRO for correction.'}
                     </DialogDescription>
                 </DialogHeader>
                 <div className="py-4">
                     <Textarea
-                        placeholder="Enter rejection reason here..."
+                        placeholder={isCommissionRejection ? "Enter Commission's rejection reason..." : "Enter rejection reason here..."}
                         value={rejectionReasonInput}
                         onChange={(e) => setRejectionReasonInput(e.target.value)}
                         rows={4}
                     />
                 </div>
                 <DialogFooter>
-                    <Button variant="outline" onClick={() => { setIsRejectionModalOpen(false); setCurrentRequestToAction(null); }}>Cancel</Button>
-                    <Button variant="destructive" onClick={handleRejectionSubmit} disabled={!rejectionReasonInput.trim()}>Submit Rejection</Button>
+                    <Button variant="outline" onClick={() => { 
+                      setIsRejectionModalOpen(false); 
+                      setCurrentRequestToAction(null); 
+                      setIsCommissionRejection(false);
+                    }}>Cancel</Button>
+                    <Button variant="destructive" onClick={handleRejectionSubmit} disabled={!rejectionReasonInput.trim()}>
+                      {isCommissionRejection ? 'Submit Final Decision' : 'Submit Rejection'}
+                    </Button>
                 </DialogFooter>
             </DialogContent>
         </Dialog>
