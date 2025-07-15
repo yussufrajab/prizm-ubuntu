@@ -67,6 +67,19 @@ export default function RetirementPage() {
   const [rejectionReasonInput, setRejectionReasonInput] = useState('');
   const [currentRequestToAction, setCurrentRequestToAction] = useState<RetirementRequest | null>(null);
 
+  const [isCorrectionModalOpen, setIsCorrectionModalOpen] = useState(false);
+  const [requestToCorrect, setRequestToCorrect] = useState<RetirementRequest | null>(null);
+  const [correctedRetirementType, setCorrectedRetirementType] = useState('');
+  const [correctedRetirementDate, setCorrectedRetirementDate] = useState('');
+  const [correctedIllnessDescription, setCorrectedIllnessDescription] = useState('');
+  const [correctedDelayReason, setCorrectedDelayReason] = useState('');
+  const [correctedMedicalFormFile, setCorrectedMedicalFormFile] = useState<FileList | null>(null);
+  const [correctedIllnessLeaveLetterFile, setCorrectedIllnessLeaveLetterFile] = useState<FileList | null>(null);
+  const [correctedLetterOfRequestFile, setCorrectedLetterOfRequestFile] = useState<FileList | null>(null);
+  const [correctedDelayDocumentFile, setCorrectedDelayDocumentFile] = useState<FileList | null>(null);
+  const [correctedAgeEligibilityError, setCorrectedAgeEligibilityError] = useState<string | null>(null);
+  const [showCorrectedDelayFields, setShowCorrectedDelayFields] = useState(false);
+
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
@@ -118,6 +131,32 @@ export default function RetirementPage() {
       }
     }
   }, [employeeDetails, retirementType, retirementDate]);
+
+  // Validation for corrected retirement date in correction modal
+  useEffect(() => {
+    setCorrectedAgeEligibilityError(null);
+    setShowCorrectedDelayFields(false);
+
+    if (requestToCorrect && requestToCorrect.employee.dateOfBirth && correctedRetirementType && correctedRetirementDate) {
+      const birthDate = parseISO(requestToCorrect.employee.dateOfBirth);
+      const proposedRetirementDate = parseISO(correctedRetirementDate);
+      const ageAtRetirement = differenceInYears(proposedRetirementDate, birthDate);
+
+      if (correctedRetirementType === 'compulsory') {
+        if (ageAtRetirement > COMPULSORY_RETIREMENT_AGE) {
+          setShowCorrectedDelayFields(true);
+        } else if (ageAtRetirement < COMPULSORY_RETIREMENT_AGE) {
+          setCorrectedAgeEligibilityError(`Employee will be ${ageAtRetirement} and not meet the compulsory retirement age (${COMPULSORY_RETIREMENT_AGE}) by the proposed date.`);
+        }
+      } else if (correctedRetirementType === 'voluntary') {
+        if (ageAtRetirement >= COMPULSORY_RETIREMENT_AGE) {
+          setCorrectedAgeEligibilityError(`Employee is aged ${ageAtRetirement} and qualifies for compulsory retirement. Please select 'Compulsory (Age 60)' as the retirement type.`);
+        } else if (ageAtRetirement < VOLUNTARY_RETIREMENT_AGE) {
+          setCorrectedAgeEligibilityError(`Employee will be ${ageAtRetirement} and not meet the voluntary retirement age (${VOLUNTARY_RETIREMENT_AGE}) by the proposed date.`);
+        }
+      }
+    }
+  }, [requestToCorrect, correctedRetirementType, correctedRetirementDate]);
 
   const resetFormFields = () => {
     setRetirementType('');
@@ -304,6 +343,87 @@ export default function RetirementPage() {
     }
   };
 
+  const handleResubmit = (request: RetirementRequest) => {
+    setRequestToCorrect(request);
+    setCorrectedRetirementType(request.retirementType);
+    setCorrectedRetirementDate(request.proposedDate);
+    setCorrectedIllnessDescription(request.illnessDescription || '');
+    setCorrectedDelayReason(request.delayReason || '');
+    setCorrectedMedicalFormFile(null);
+    setCorrectedIllnessLeaveLetterFile(null);
+    setCorrectedLetterOfRequestFile(null);
+    setCorrectedDelayDocumentFile(null);
+    setIsCorrectionModalOpen(true);
+  };
+
+  const handleConfirmResubmit = async (request: RetirementRequest | null) => {
+    if (!request || !user) return;
+
+    // Basic validation
+    if (!correctedRetirementType || !correctedRetirementDate || !correctedLetterOfRequestFile) {
+      toast({ title: "Submission Error", description: "All required fields and documents must be provided.", variant: "destructive" });
+      return;
+    }
+
+    // Check age eligibility error
+    if (correctedAgeEligibilityError) {
+      toast({ title: "Eligibility Error", description: correctedAgeEligibilityError, variant: "destructive" });
+      return;
+    }
+
+    // Additional validation for illness type
+    if (correctedRetirementType === 'illness' && !correctedMedicalFormFile) {
+      toast({ title: "Submission Error", description: "Medical form is required for illness retirement.", variant: "destructive" });
+      return;
+    }
+
+    try {
+      let documentsList = ['Letter of Request'];
+      if (correctedRetirementType === 'illness') {
+        documentsList.push('Medical Form');
+        if (correctedIllnessLeaveLetterFile) documentsList.push('Illness Leave Letter');
+      }
+      if (correctedDelayDocumentFile) documentsList.push('Delay Document');
+
+      // Convert date string to ISO-8601 DateTime format
+      const proposedDateTime = new Date(correctedRetirementDate).toISOString();
+      
+      const payload = {
+        status: 'Pending HRMO/HHRMD Review',
+        reviewStage: 'initial',
+        retirementType: correctedRetirementType,
+        proposedDate: proposedDateTime,
+        illnessDescription: correctedRetirementType === 'illness' ? correctedIllnessDescription : null,
+        delayReason: correctedDelayReason || null,
+        documents: documentsList,
+        rejectionReason: null,
+        reviewedById: user.id
+      };
+
+      const response = await fetch(`/api/retirement/${request.id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.text();
+        console.error('Resubmit error:', errorData);
+        throw new Error('Failed to resubmit retirement request');
+      }
+
+      toast({ title: "Success", description: `Retirement request for ${request.employee.name} resubmitted successfully.` });
+      setIsCorrectionModalOpen(false);
+      setRequestToCorrect(null);
+      await fetchRequests();
+    } catch (error) {
+      console.error("[RESUBMIT_RETIREMENT]", error);
+      toast({ title: "Error", description: "Failed to resubmit retirement request.", variant: "destructive" });
+    }
+  };
+
   const paginatedRequests = pendingRequests.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
@@ -471,7 +591,7 @@ export default function RetirementPage() {
                 <div className="mt-3 pt-3 border-t flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
                   <Button size="sm" variant="outline" onClick={() => { setSelectedRequest(request); setIsDetailsModalOpen(true); }}>View Details</Button>
                   {role === ROLES.HRO && (request.status === 'Rejected by HRMO - Awaiting HRO Correction' || request.status === 'Rejected by HHRMD - Awaiting HRO Correction') && (
-                    <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white" onClick={() => console.log('Correction functionality to be implemented')}>
+                    <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white" onClick={() => handleResubmit(request)}>
                       Correct and Resubmit
                     </Button>
                   )}
@@ -690,6 +810,138 @@ export default function RetirementPage() {
                     <Button variant="destructive" onClick={handleRejectionSubmit} disabled={!rejectionReasonInput.trim()}>Submit Rejection</Button>
                 </DialogFooter>
             </DialogContent>
+        </Dialog>
+      )}
+
+      {requestToCorrect && (
+        <Dialog open={isCorrectionModalOpen} onOpenChange={setIsCorrectionModalOpen}>
+          <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto">
+            <DialogHeader>
+              <DialogTitle>Correct & Resubmit Retirement Request</DialogTitle>
+              <DialogDescription>
+                Please update the details and upload corrected documents for <strong>{requestToCorrect.employee.name}</strong> (ZanID: {requestToCorrect.employee.zanId}).
+              </DialogDescription>
+            </DialogHeader>
+            <div className="py-4 space-y-4">
+              <Alert variant="default">
+                <AlertTriangle className="h-4 w-4" />
+                <AlertTitle>Important</AlertTitle>
+                <AlertDescription>
+                  Update the retirement details and re-attach all required PDF documents, even if only one needed correction.
+                </AlertDescription>
+              </Alert>
+              
+              <div className="space-y-4">
+                <div>
+                  <Label htmlFor="correctedRetirementType">Retirement Type</Label>
+                  <Select value={correctedRetirementType} onValueChange={setCorrectedRetirementType}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select retirement type" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="compulsory">Compulsory (Age 60)</SelectItem>
+                      <SelectItem value="voluntary">Voluntary (Age 55+)</SelectItem>
+                      <SelectItem value="illness">Medical/Illness</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+                
+                <div>
+                  <Label htmlFor="correctedRetirementDate">Proposed Retirement Date</Label>
+                  <Input 
+                    id="correctedRetirementDate" 
+                    type="date" 
+                    value={correctedRetirementDate} 
+                    onChange={(e) => setCorrectedRetirementDate(e.target.value)}
+                    min={minRetirementDate}
+                  />
+                </div>
+
+                {correctedAgeEligibilityError && (
+                  <Alert variant="destructive">
+                    <AlertTriangle className="h-4 w-4" />
+                    <AlertTitle>Age Eligibility Error</AlertTitle>
+                    <AlertDescription>
+                      {correctedAgeEligibilityError}
+                    </AlertDescription>
+                  </Alert>
+                )}
+
+                {correctedRetirementType === 'illness' && (
+                  <div>
+                    <Label htmlFor="correctedIllnessDescription">Illness Description</Label>
+                    <Textarea 
+                      id="correctedIllnessDescription" 
+                      placeholder="Describe the illness/medical condition" 
+                      value={correctedIllnessDescription} 
+                      onChange={(e) => setCorrectedIllnessDescription(e.target.value)} 
+                    />
+                  </div>
+                )}
+
+                {showCorrectedDelayFields && (
+                  <div>
+                    <Label htmlFor="correctedDelayReason">Delay Reason (Required for retirement beyond age 60)</Label>
+                    <Textarea 
+                      id="correctedDelayReason" 
+                      placeholder="Explain reason for delay beyond age 60" 
+                      value={correctedDelayReason} 
+                      onChange={(e) => setCorrectedDelayReason(e.target.value)} 
+                    />
+                  </div>
+                )}
+              </div>
+
+              <div className="space-y-4">
+                <h4 className="font-semibold text-base">Required Documents (PDF Only)</h4>
+                <div>
+                  <Label htmlFor="correctedLetterOfRequestFile" className="flex items-center mb-1">
+                    <FileText className="mr-2 h-4 w-4 text-primary" />Upload Letter of Request (Required)
+                  </Label>
+                  <Input id="correctedLetterOfRequestFile" type="file" onChange={(e) => setCorrectedLetterOfRequestFile(e.target.files)} accept=".pdf" />
+                </div>
+                
+                {correctedRetirementType === 'illness' && (
+                  <>
+                    <div>
+                      <Label htmlFor="correctedMedicalFormFile" className="flex items-center mb-1">
+                        <Stethoscope className="mr-2 h-4 w-4 text-primary" />Upload Medical Form (Required)
+                      </Label>
+                      <Input id="correctedMedicalFormFile" type="file" onChange={(e) => setCorrectedMedicalFormFile(e.target.files)} accept=".pdf" />
+                    </div>
+                    <div>
+                      <Label htmlFor="correctedIllnessLeaveLetterFile" className="flex items-center mb-1">
+                        <FileText className="mr-2 h-4 w-4 text-primary" />Upload Illness Leave Letter (Optional)
+                      </Label>
+                      <Input id="correctedIllnessLeaveLetterFile" type="file" onChange={(e) => setCorrectedIllnessLeaveLetterFile(e.target.files)} accept=".pdf" />
+                    </div>
+                  </>
+                )}
+
+                {showCorrectedDelayFields && (
+                  <div>
+                    <Label htmlFor="correctedDelayDocumentFile" className="flex items-center mb-1">
+                      <ClipboardCheck className="mr-2 h-4 w-4 text-primary" />Upload Delay Document (Optional)
+                    </Label>
+                    <Input id="correctedDelayDocumentFile" type="file" onChange={(e) => setCorrectedDelayDocumentFile(e.target.files)} accept=".pdf" />
+                  </div>
+                )}
+              </div>
+              
+              {requestToCorrect.rejectionReason && (
+                <div className="mt-4 p-3 bg-destructive/10 border border-destructive/20 rounded-md">
+                  <Label className="font-semibold text-destructive">Previous Rejection Reason:</Label>
+                  <p className="text-sm text-destructive mt-1">{requestToCorrect.rejectionReason}</p>
+                </div>
+              )}
+            </div>
+            <DialogFooter>
+              <Button type="button" variant="outline" onClick={() => setIsCorrectionModalOpen(false)}>Cancel</Button>
+              <Button onClick={() => handleConfirmResubmit(requestToCorrect)}>
+                Resubmit Request
+              </Button>
+            </DialogFooter>
+          </DialogContent>
         </Dialog>
       )}
     </div>

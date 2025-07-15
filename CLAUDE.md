@@ -96,7 +96,6 @@ The project uses a comprehensive UI component library based on Radix UI primitiv
 ## AI Integration
 The project includes AI capabilities through Google Genkit:
 - Complaint rewriting functionality
-- Request analysis
 - Development server available via `npm run genkit:dev`
 
 ## Module Review Summary (2025-07-13)
@@ -131,8 +130,8 @@ The project includes AI capabilities through Google Genkit:
 
 4. **Navigation Structure** (`src/lib/navigation.ts`)
    - Comprehensive role-based navigation system
-   - 16 main navigation items with role restrictions
-   - Nested navigation for Admin Management and AI Tools
+   - 15 main navigation items with role restrictions
+   - Nested navigation for Admin Management
    - Icons from Lucide React library
 
 5. **API Structure** (`src/app/api/`)
@@ -143,7 +142,6 @@ The project includes AI capabilities through Google Genkit:
 
 6. **AI Integration** (`src/ai/`)
    - **Complaint Rewriter** (`flows/complaint-rewriter.ts`): Standardizes employee complaints to meet civil service commission standards
-   - **Request Analyzer** (`flows/request-analyzer.ts`): Categorizes requests and suggests appropriate reviewers
    - Uses Google's Gemini 2.0 Flash model via Genkit
    - Server-side execution with 'use server' directive
 

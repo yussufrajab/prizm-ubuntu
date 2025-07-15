@@ -22,7 +22,6 @@ import {
   AlertTriangle,
   LineChart,
   Building,
-  Sparkles,
 } from 'lucide-react';
 import type { NavItem, Role } from './types';
 import { ROLES } from './constants';
@@ -139,20 +138,6 @@ export const NAV_ITEMS: NavItem[] = [
     icon: ListChecks,
     roles: [ROLES.HRO, ROLES.HHRMD, ROLES.HRMO, ROLES.DO, ROLES.CSCS, ROLES.HRRP, ROLES.PO],
     description: 'Track the status of submitted requests.',
-  },
-  {
-    title: 'AI Tools',
-    icon: Sparkles,
-    roles: [ROLES.HRO, ROLES.HHRMD, ROLES.DO],
-    children: [
-        {
-            title: 'Request Analyzer',
-            href: '/dashboard/request-analyzer',
-            icon: Sparkles,
-            roles: [ROLES.HRO, ROLES.HHRMD, ROLES.DO],
-            description: 'Use AI to categorize new requests.'
-        }
-    ]
   },
   {
     title: 'Reports & Analytics',
