@@ -26,9 +26,13 @@ export async function PUT(req: Request, { params }: { params: { id: string } }) 
             id: true,
             name: true,
             employeeId: true,
-            zanId: true,
-            department: true,
-            cadre: true,
+            employee: {
+              select: {
+                zanId: true,
+                department: true,
+                cadre: true,
+              }
+            },
             institution: { select: { name: true } },
           },
         },

@@ -68,9 +68,13 @@ export async function GET(req: Request) {
         select: {
           name: true,
           employeeId: true,
-          zanId: true,
-          department: true,
-          cadre: true,
+          employee: {
+            select: {
+              zanId: true,
+              department: true,
+              cadre: true,
+            }
+          },
           institution: { select: { name: true } }
         }
       },
@@ -89,8 +93,15 @@ export async function GET(req: Request) {
         include: includeOptions,
       });
     } else if (userRole === ROLES.DO || userRole === ROLES.HHRMD) {
+      // Both DO and HHRMD can see all pending complaints with equal priority
       complaints = await db.complaint.findMany({
-        where: { assignedOfficerRole: userRole, status: { not: "Closed - Satisfied" } },
+        where: { 
+          OR: [
+            { assignedOfficerRole: ROLES.DO },
+            { assignedOfficerRole: ROLES.HHRMD }
+          ],
+          status: { not: "Closed - Satisfied" } 
+        },
         orderBy: { createdAt: 'desc' },
         include: includeOptions,
       });
@@ -107,9 +118,9 @@ export async function GET(req: Request) {
         id: c.id,
         employeeId: c.complainant.employeeId,
         employeeName: c.complainant.name,
-        zanId: c.complainant.zanId,
-        department: c.complainant.department,
-        cadre: c.complainant.cadre,
+        zanId: c.complainant.employee?.zanId,
+        department: c.complainant.employee?.department,
+        cadre: c.complainant.employee?.cadre,
         complaintType: c.complaintType,
         subject: c.subject,
         details: c.details,
